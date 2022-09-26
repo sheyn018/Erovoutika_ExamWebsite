@@ -1,3 +1,7 @@
+<?php 
+include_once 'src/includes/header.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,81 +17,11 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"> 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
- 
- <!-- Partner -->
- <section>
-    
- </section>
- <!-- Footer -->
- <script src="https://kit.fontawesome.com/24d5cf3efd.js"></script>
-
 </head>
 <body>
-    <!-- Nav Bar -->
-    <div class="navbar-container">
-    <header>
-        <a href="#" class="logo"><img src="src/images/logo.png"></a>
-        <div class="menuToggle" onclick="toggleMenu()"></div>
-        <ul class="navigation">
-            <li><a href="#banner">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-            <div class="login">
-                <a href="#"><button class="btn btn-outline-primary" id="show-login">Login</button></a>&nbsp;&nbsp;&nbsp;
-                <a href="#"><button class="btn btn-outline-primary" id="show-login">Signup</button></a>&nbsp;&nbsp;&nbsp;
-                <div class="popup">
-                    <div class="close-btn">&times;</div>
-                    <div class="form">
-                        <h2>Login</h2>
-                        <div class="form-element">
-                            <label for="email">Username</label>
-                            <input type="text" id="email" placeholder="Enter username">
-                        </div>
-                        <div class="form-element">
-                            <label for="password">Password</label>
-                            <input type="password" id="password" placeholder="Enter password">
-                        </div>
-                        <div class="form-element">
-                            <input type="checkbox" id="remember-me">
-                            <label for="remember-me">Remember Me</label>
-                        </div>
-                        <div class="form-element">
-                            <button>Log in</button>
-                        </div>
-                        <div class="form-element">
-                            <a href="#" style="text-align: center;">Dont have account?</a>
-                            <button>Sign up</button>
-                        </div>
-                    </div>
-                </div>
-    </header>
-</div>
-
-    <!-- Home -->
-    <section class="banner" id="banner">
-        <div class="d-flex justify-content-between bg-light">
-			<div class="home1">
-                <br><br><br><br><br>
-                <h3 class="info1" style="margin-left: 100px;">One-Stop-Shop Innovative Solutions</h3>
-                <br>
-                <h4 class="info2" style="margin-left: 100px; line-height: 40px;">We are team of Engineers and IT making <br> Solutions
-                    for Robotics, Automation, <br> Electronics and ICT.</h4>
-                <br>
-
-                <a href="login.php" type="button" class="btn btn-outline-primary" id="modal_trigger" style="margin-left: 100px;">Exam List</a></div>
-			<div>
-                <div class="imgBx" style="margin-right: 100px;">
-                    <img src="src/images/image1.png">
-                </div>
-	  </div>
-    </section>
-
     <!-- About Us -->
-   
-    <div class="about-section">
+    <section class="aboutus">
+    <div class="about-section" id="about-section">
         <div class="inner-container">
             <div class="row">
                 <div class="col-md-12">
@@ -106,9 +40,9 @@
                 <br>
                <p class="text"> Our aim is to assist our clients in getting their nees and requirement in the quickest possible time frame, in the most professional manner. We pride ourselves on providing the highest qualuity service, at the most reasonable cost.</p>
             </p>
-           
         </div>
     </div>
+    </section>
     <!-- Services -->
     <div class="service" id="service">
     <section class="we-offer-area text-center bg-gray">
@@ -198,8 +132,8 @@
     </section>
     </div>
     
-    <!-- Portfolio -->
-    <section class="portfolio"id="portfolio">
+    <!-- Porfolio -->
+    <section class="porfolio"id="porfolio">
         <div class="row">
             <div class="col-md-12">
                 <div class="site-heading text-center">
@@ -335,70 +269,8 @@
 
     </section>
 
-    <!-- Footer -->
-    <center>
-    <footer>
-        <hr>
-<div class="footer-row">
-    <div class="footer-col">
-        <h5 style="color:#2600ff;">Erovoutika Robotics & Automation Solutions</h5>
-        <!-- <img src="images/logo.png" alt="" class="footer-logo"> -->
-        <p class="company">Our company is envisioned to empower and strengthen the technical skills of industry practitioners, engineers, teachers, and students. Erovoutika is a pundit in the field of electronics, robotics, automation, PLC, Internet-of-Things, Image Processing, and IT including software development, web development, network architecture, cybersecurity, and the like. It is a supplier and distributor of electronics products such as sensors, motors, modules, robots, and other training kits. </p>
-        <br><br>
-    </div>
-    <div class="col">
-        <h3 class="details1">Office <div class="underline"><span></span></div></h3>
-        <p>PARC HOUSE II, Unit 703, Epifanio de los</p>
-        <p>Santos Ave</p>
-        <p>Makati, 1212 Metro Manila</p>
-        <p class="email-id">sales@erovoutika.ph</p>
-
-    </div>
-    <div class="col">
-        <h3>Links <div class="underline"><span></span></div></h3>
-        <ul>
-            <li><a href="#banner">Home</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#service">Services</a></li>
-            <li><a href="#contact">Contacts</a></li>
-        </ul>
-    </div>
-    <div class="col">
-        <h3>Newsletter <div class="underline"><span></span></div></h3>
-        <form action="" class="form">
-        <i class="fa-regular fa-envelope"></i>
-            <input type="email" placeholder="  Enter your email" required>
-            <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>
-        </form>
-        <div class="social-icons">
-            <a href="https://www.facebook.com/erovoutika/"><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://twitter.com/erovoutika?lang=en"><i class="fa-brands fa-twitter"></i>
-            <a href="https://www.youtube.com/c/EROVOUTIKARoboticsandAutomationSolutions?app=desktop"><i class="fa-brands fa-youtube"></i>
-            <a href="https://www.linkedin.com/company/erovoutika/?originalSubdomain=ph"><i class="fa-brands fa-linkedin"></i>
-        </div>
-    </div>
-</div>
-<hr>
-<p class="copyright">&copy; Erovoutika - All Rights Reserved</p>
-</footer>
-</center>
-
-<!-- Header -->
-<script type="text/javascript">
-    window.addEventListener('scroll', function(){
-        const header = document.querySelector('header');
-        header.classList.toggle("sticky", window.scrollY > 0);
-    });
-</script>
-
-<!-- Login Modal -->
-<script>
-    document.querySelector("#show-login").addEventListener("click", function(){
-        document.querySelector(".popup").classList.add("active");
-    });
-    document.querySelector(".popup .close-btn").addEventListener("click", function(){
-        document.querySelector(".popup").classList.remove("active");
-    });
-</script>
+    <?php
+    include_once 'src/includes/footer.php';
+    ?>
 </body>
 </html>
