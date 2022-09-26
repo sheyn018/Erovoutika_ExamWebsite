@@ -23,9 +23,9 @@ Repository for Erovoutika Internship: Exam/Quiz Management System
 6. Now the XAMPP icon is clearly visible on the right side of start menu. Show or Hide can be set by using the control panel by clicking on the icon.
 7. To start Apache and MySql, just click on the Start button on the control panel. 
 
-# Making server request: Open your web browser and check whether the XAMPP service has properly installed or not. Type in the URL: http://localhost. If you are able to see the default page for XAMPP, you have successfully installed your XAMPP Server.
+- Making server request: Open your web browser and check whether the XAMPP service has properly installed or not. Type in the URL: http://localhost. If you are able to see the default page for XAMPP, you have successfully installed your XAMPP Server.
 
-# To Check if PHP is Working: All the website related files are organized in a folder called htdocs and then run index.php file by using http://localhost/index.php or http://localhost.
+- To Check if PHP is Working: All the website related files are organized in a folder called htdocs and then run index.php file by using http://localhost/index.php or http://localhost.
 
 ### PHP
 1. The first thing you have to do is to download the PHP package file of your choice from the official PHP downloads page.
