@@ -36,7 +36,7 @@ include '../includes/connectdb.php';
 			if($_SESSION['staff_sid']==session_id()){
 				header("location:404.php");		
 			}else{
-				header("location:login.php");
+				header("location:login_template.php");
 			}
 		}
 	}
