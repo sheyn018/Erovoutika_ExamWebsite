@@ -1,3 +1,21 @@
+<?php
+include '../includes/connectdb.php';
+
+$clUrID = $_SESSION['clUrID'];
+
+$userQuery = mysqli_query($connectdb, "SELECT * FROM tbusers where clUrID = $clUrID");
+  while($row = mysqli_fetch_array($userQuery)){
+    $clUrUsername = $row['clUrUsername'];
+    $clUrFirstname = $row['clUrFirstname'];
+    $clUrLastname = $row['clUrLastname'];
+    $clUrcontact_num = $row['clUrcontact_num'];
+    $clUremail = $row['clUremail'];
+    $clUraddress = $row['clUraddress'];
+}
+
+	if($_SESSION['client_sid']==session_id())
+	{
+		?>
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -43,7 +61,7 @@
                       <ul class="dropdown-menu dropdown-menu-end">
                         <li><a class="dropdown-item" href="#"><i class="bi bi-person-circle me-2"></i>Profile</a></li>
                         <li><a class="dropdown-item" href="#"><i class="bi bi-gear-fill me-2"></i>Settings</a></li>
-                        <li><a class="dropdown-item" href="#"><span class="glyphicon me-2">&#xe017;</span>Logout</a></li>
+                        <li><a class="dropdown-item" href="../includes/logout.php"><span class="glyphicon me-2">&#xe017;</span>Logout</a></li>
                       </ul>
                     </div>
                 </div>
@@ -60,9 +78,9 @@
                           <div class="d-flex flex-column align-items-center text-center">
                             <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="150">
                             <div class="mt-3">
-                              <h4>Kenneth Valdez</h4>
-                              <p class="text-secondary mb-1">Username</p>
-                              <p class="text-muted font-size-sm">Email Address</p>
+                              <h4><?php echo $clUrFirstname." ".$clUrLastname ?></h4>
+                              <p class="text-secondary mb-1"><?php echo $clUrUsername ?></p>
+                              <p class="text-muted font-size-sm"><?php echo $clUremail ?></p>
                             </div>
                           </div>
                         </div>
@@ -76,7 +94,7 @@
                               <h6 class="mb-0">Full Name</h6>
                             </div>
                             <div class="col-sm-9 text-secondary">
-                              Kenneth Valdez
+                              <?php echo $clUrFirstname." ".$clUrLastname ?>
                             </div>
                           </div>
                           <hr>
@@ -85,7 +103,7 @@
                                   <h6 class="mb-0">Username</h6>
                               </div>
                               <div class="col-sm-9 text-secondary">
-                                  (239) 816-9029
+                                <?php echo $clUrUsername ?>
                               </div>
                           </div>
                           <hr>
@@ -94,7 +112,7 @@
                                   <h6 class="mb-0">Email Address</h6>
                               </div>
                               <div class="col-sm-9 text-secondary">
-                                  user@gmail.com
+                                <?php echo $clUremail ?>
                               </div>
                           </div>
                           <hr>
@@ -103,7 +121,7 @@
                               <h6 class="mb-0">Mobile</h6>
                             </div>
                             <div class="col-sm-9 text-secondary">
-                              (320) 380-4539
+                            <?php echo $clUrcontact_num ?>
                             </div>
                           </div>
                           <hr>
@@ -116,6 +134,7 @@
                       </div>
                     </div>
                 </div>
+
                     <div class="row gutters-sm border-5 border-bottom border-primary ms-1 me-1 mt-4">
                         <h1>COMPLETED EXAMS</h1>
                     </div>
@@ -245,3 +264,18 @@
             </div>
     </body>
 </html>
+<?php
+    }else
+	{
+		if($_SESSION['admin_sid']==session_id()){
+			header("location:404.php");		
+		}
+		else{
+			if($_SESSION['staff_sid']==session_id()){
+				header("location:404.php");		
+			}else{
+				header("location:login_template.php");
+			}
+		}
+	}
+?>
