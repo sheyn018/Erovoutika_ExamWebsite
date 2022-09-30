@@ -148,7 +148,11 @@ header .btn{
   }
 }
 
-
+/* Modal */
+#show-login {
+  position: relative;
+  margin-left: 950px;
+}
 .popup {
   position: absolute;
   top: -150%;
@@ -233,8 +237,160 @@ header .btn{
   font-weight: 600;
 }
 
+.popup2 {
+  position: absolute;
+  top: -150%;
+  left: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(1.25);
+  width: 480px;
+  padding: 20px 30px;
+  background: #2600ff;
+  box-shadow: 2px 2px 5px 5px rgba(0,0,0,0.15);
+  border-radius: 10px;
+  transition: top 0ms ease-in-out 200ms,
+              opacity 200ms ease-in-out 0ms,
+              transform 200ms ease-in-out 0ms;
+}
+.popup2.active {
+  margin-top :60px;
+  margin-left: 310px;
+  top: 50%;
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  transition: top 0ms ease-in-out 0ms,
+              opacity 200ms ease-in-out 0ms,
+              transform 200ms ease-in-out 0ms;
+}
+.popup2 .close-btn2 {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 15px;
+  height: 15px;
+  background: rgb(147, 179, 253);
+  color: #eee;
+  text-align: center;
+  line-height: 15px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+.popup2 .form2 h2 {
+  text-align:center;
+  color: #ffffff;
+  margin: 10px 0px 20px;
+  font-size: 25px;
+}
+.popup2 .form2 .form-element2 {
+  margin: 15px 0px;
+}
+.popup2 .form2 .form-element2 label {
+  font-size: 14px;
+  color: #ffffff;
+}
+.popup2 .form2 .form-element2 input[type="text"],
+.popup2 .form2 .form-element2 input[type="password"] {
+  margin-top: 5px;
+  display: block;
+  width: 100%;
+  padding :10px;
+  outline: none;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+}
+.popup2 .form2 .form-element2 input[type="checkbox"] {
+  margin-right : 5px;
+}
+.popup2 .form2 .form-element2 button {
+  width :100%;
+  height: 40px;
+  border: none;
+  outline: none;
+  font-size: 1gpx;
+  background: rgb(53, 129, 252);
+  color: #f5f5f5;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.popup2 .form2 .form-element2 a {
+  display: block;
+  text-align: right;
+  font-size: 15px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+}
 
+/* Exam Portal List */
+#exam-list {
+  margin-left: 180px;
+  margin-top: 100px;
+  position: absolute;
+  background: #fff;
+  color: #2600ff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  letter-spacing: 0.1em;
+  font-weight: 400;
+  padding: 10px 30px;
+  transition: 0.5s;
+}
+#exam-list:hover {
+  background: var(--clr);
+  color: var(--clr);
+  letter-spacing: 0.25em;
+  box-shadow: 0 0 35px var(--clr);
+}
+#exam-list:before {
+  content: '';
+  position: absolute;
+  inset: 2px;
+  background: #ffffff;
+}
+#exam-list span {
+  position: relative;
+  z-index: 1;
+}
+#exam-list i {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+#exam-list i::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 80%;
+  width: 10px;
+  height: 4px;
+  background: #27282c;
+  transform: translateX(-50%) skewX(325deg);
+  transition: 0.5s;
+}
+#exam-list:hover i::before{
+  width : 20px;
+  left: 20%;
+}
+#exam-list i::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 20%;
+  width: 10px;
+  height: 4px;
+  background: #27282c;
+  transform: translateX(-50%) skewX(325deg);
+  transition: 0.5s;
+}
+#exam-list:hover i::before{
+  width : 20px;
+  left: 80%;
+}
 /* Home */
+.home1 {
+  background-image: url(src\images\background.jpg) no-repeat left;
+}
 #home{
     position: relative;
     width: auto;
@@ -242,10 +398,13 @@ header .btn{
     display: flex;
     justify-content: start;
     align-items: center;
-    background: url(\src\images\backg.jpg) no-repeat left;
+    background-image: url(src\images\background.jpg) no-repeat left;
     background-size: cover;
     margin-left: 20px;
-
+}
+#logo2 {
+  width: 550px;
+  height: 500px;
 }
 
 /* .imgBx{
@@ -846,3 +1005,5 @@ hr{
   }
 
 /* Contact Us */
+
+

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="src/css/homestyle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
   </head>
   <body>
@@ -27,17 +27,19 @@
 
           <!-- Home -->
     <section class="section-main" id="home">
-        <div class="d-flex justify-content-start bg-light">
-			<div class="home1">
-
-                <br><br><br><br>
-                <h3 class="info1" style="margin-left: 5px;">One-Stop-Shop Innovative Solutions</h3>
+      <div class="d-flex justify-content-start bg-light">
+			  <div class="home1">
+          <img src="src/images/login.png" id="logo2" style="position:absolute";>
+                <br><br><br>
+                <h4 class="info1" style="margin-left: 730px;">One-Stop-Shop Innovative Solutions</h3>
                 <br>
-                <h4 class="info2" style="margin-left: 5px; line-height: 40px;">We are team of Engineers and IT making <br> Solutions
+                <h5 class="info2" style="margin-left: 730px; line-height: 40px;">We are team of Engineers and IT making <br> Solutions
                     for Robotics, Automation, <br> Electronics and ICT.</h4>
-                <br>
-                <a><button class="btn btn-outline-primary" id="show-login">Login | Signup</button></a>
+                    <br><br><br><br>
+                    <a href="" id="exam-list" style="--clr:#1e9bff"><span>Exam List</span><i></i></a>
 
+                <a><button class="btn btn-outline-primary" id="show-login">Login | Signup</button></a>&nbsp;&nbsp;&nbsp;
+                </div>
                 <div class="popup">
                     <div class="close-btn">&times;</div>
                         <div class="form">
@@ -60,11 +62,39 @@
                             <div class="form-element">
                             <a href="#" style="text-align: center;">Dont have account?</a>
                             <div>
-                            <button id="show-signup">Sign up</button>
+                            <a href="#"><button id="show-sign">Sign up</button></a>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a><button class="btn btn-outline-primary" id="show-sign">Signup</button></a> -->
+
+                <div class="popup2">
+                    <div class="close-btn2">&times;</div>
+                        <div class="form2">
+                            <h2>Signup</h2>
+                            <div class="form-element2">
+                                <label for="email2">Username</label>
+                                <input type="text" id="email2" placeholder="Enter username">
+                            </div>
+                            <div class="form-element2">
+                                <label for="password2">Password</label>
+                                <input type="password" id="password2" placeholder="Enter password">
+                            </div>
+                            <div class="form-element2">
+                                <label for="password2">Confirm Password</label>
+                                <input type="password" id="password2.1" placeholder="Enter password">
+                            <div class="form-element">
+                            <div>
+                              <br>
+                              <br>
+                            <a href="#"><button id="show-signup">Register</button></a>
+                        </div>
+                    </div>
+                </div>
+        </div>
+      </div>
     </section>
 <!-- 
     <section class="section-two">
@@ -102,5 +132,14 @@
     });
     </script>
 
+            <!-- Signup Modal -->
+            <script>
+    document.querySelector("#show-sign").addEventListener("click", function(){
+        document.querySelector(".popup2").classList.add("active");
+    });
+    document.querySelector(".popup2 .close-btn2").addEventListener("click", function(){
+        document.querySelector(".popup2").classList.remove("active");
+    });
+    </script>
   </body>
 </html>
