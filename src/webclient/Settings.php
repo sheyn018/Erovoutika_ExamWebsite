@@ -1,3 +1,11 @@
+<?php
+include '../includes/connectdb.php';
+
+
+
+	if($_SESSION['client_sid']==session_id())
+	{
+		?>
 <!DOCTYPE html>
 <html lang="en">
      <head>
@@ -24,6 +32,21 @@
     </head>
 
     <body>
+
+    <?php
+    $clUrID = $_SESSION['clUrID'];
+
+    $userQuery = mysqli_query($connectdb, "SELECT * FROM tbusers where clUrID = '$clUrID'");
+      while($row = mysqli_fetch_array($userQuery)){
+        $clUrID = $row['clUrID'];
+        $clUrUsername = $row['clUrUsername'];
+        $clUrFirstname = $row['clUrFirstname'];
+        $clUrLastname = $row['clUrLastname'];
+        $clUrcontact_num = $row['clUrcontact_num'];
+        $clUremail = $row['clUremail'];
+        $clUraddress = $row['clUraddress'];
+    }
+    ?>
         <header class="bg-white border-5 border-bottom border-primary">
             <nav class="navbar navbar-expand-lg navbar-light bg-light ms-5 me-5">
                 <a class="navbar-brand" href="#"><img src="src/images/Logo2.png" style="height: 60px;"></a>
@@ -33,24 +56,26 @@
 
                 <div class="collapse navbar-collapse position-absolute end-0" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                        <a class="nav-item nav-link text-dark mt-3" href="#">Home</a>
-                        <a class="nav-item nav-link text-dark mt-3" href="#">About</a>
-                        <a class="nav-item nav-link text-dark mt-3" href="#">Contact</a>
+                        <a class="nav-item nav-link text-dark mt-3" href="../webexam/ExamList.php">Exam Lists</a>
                         <div class="btn-group">
                           <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="bi bi-person-fill"></i>
                           </button>
                           <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="#"><i class="bi bi-person-circle me-2"></i>Profile</a></li>
-                            <li><a class="dropdown-item" href="#"><i class="bi bi-gear-fill me-2"></i>Settings</a></li>
-                            <li><a class="dropdown-item" href="#"><span class="glyphicon me-2">&#xe017;</span>Logout</a></li>
+                            <li><a class="dropdown-item" href="UserProfile.php"><i class="bi bi-person-circle me-2"></i>Profile</a></li>
+                            <li>
+                            <?php echo
+                            '<a class="dropdown-item" href="Settings.php?clUrID='.$clUrID.'">'
+                            ?>
+                            <i class="bi bi-gear-fill me-2"></i>Settings</a></li>
+                            <li><a class="dropdown-item" href="../includes/logout.php"><span class="glyphicon me-2">&#xe017;</span>Logout</a></li>
                           </ul>
                         </div>
                     </div>
                 </div>
             </nav>
         </header>
-
+        
         <div class="container-fluid mt-4">
             <div class="row gutters">
                 <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
@@ -61,7 +86,7 @@
                                     <div class="user-avatar">
                                         <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Maxwell Admin">
                                     </div>
-                                    <h5 class="user-name">Sample Name</h5>
+                                    <h5 class="user-name"><?php echo $clUrUsername ?></h5>
                                     <h6 class="user-email">sample@gmail.com</h6>
                                 </div>
                                 <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
@@ -92,25 +117,25 @@
                                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                         <div class="form-group mb-3">
                                             <label for="fullName">Full Name</label>
-                                            <input type="text" class="form-control" id="fullName" placeholder="Enter full name">
+                                            <input type="text" class="form-control" id="fullName" placeholder="<?php echo $clUrFirstname.' '.$clUrLastname ?>">
                                         </div>
                                     </div>
                                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                         <div class="form-group mb-3">
                                             <label for="eMail">Email</label>
-                                            <input type="email" class="form-control" id="eMail" placeholder="Enter email ID">
+                                            <input type="email" class="form-control" id="eMail" placeholder="<?php echo $clUremail ?>">
                                         </div>
                                     </div>
                                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                         <div class="form-group mb-3">
                                             <label for="phone">Username</label>
-                                            <input type="text" class="form-control" id="phone" placeholder="Enter username">
+                                            <input type="text" class="form-control" id="phone" placeholder="<?php echo $clUrUsername ?>">
                                         </div>
                                     </div>
                                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                         <div class="form-group mb-3">
                                             <label for="website">Phone</label>
-                                            <input type="url" class="form-control" id="website" placeholder="Enter phone number">
+                                            <input type="url" class="form-control" id="website" placeholder="<?php echo $clUrcontact_num ?>">
                                         </div>
                                     </div>
                                 </div>
@@ -168,7 +193,12 @@
                                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                         <h6 class="mb-2 text-primary mb-4">Account Deletion</h6>
 
-                                        <button type="button" id="submit" name="submit" class="btn btn-primary">Delete Account <i class="bi bi-arrow-right"></i></button>
+                                        <button type="button" id="submit" name="submit" class="btn btn-primary">
+                                            <?php  
+                                                 echo '<a href="../crud/tbusers_delete.php?clUrID='.$clUrID.'">' ?>
+                                                Delete Account <i class="bi bi-arrow-right"></i>
+                                            <?php echo '</a>' ?>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -182,3 +212,18 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     </body>
 </html>
+<?php
+    }else
+	{
+		if($_SESSION['admin_sid']==session_id()){
+			header("location:404.php");		
+		}
+		else{
+			if($_SESSION['staff_sid']==session_id()){
+				header("location:404.php");		
+			}else{
+				header("location:login_template.php");
+			}
+		}
+	}
+?>

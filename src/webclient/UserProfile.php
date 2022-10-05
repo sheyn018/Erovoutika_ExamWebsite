@@ -51,16 +51,18 @@ $userQuery = mysqli_query($connectdb, "SELECT * FROM tbusers where clUrID = $clU
 
             <div class="collapse navbar-collapse position-absolute end-0" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-item nav-link  text-dark mt-4" href="#">Home</a>
-                    <a class="nav-item nav-link  text-dark mt-4" href="#">About</a>
-                    <a class="nav-item nav-link  text-dark mt-4" href="#">Contact</a>
+                    <a class="nav-item nav-link  text-dark mt-4" href="../webexam/ExamList.php">Exam List</a>
                     <div class="btn-group">
                       <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="bi bi-person-fill"></i>
                       </button>
                       <ul class="dropdown-menu dropdown-menu-end">
-                        <li><a class="dropdown-item" href="#"><i class="bi bi-person-circle me-2"></i>Profile</a></li>
-                        <li><a class="dropdown-item" href="#"><i class="bi bi-gear-fill me-2"></i>Settings</a></li>
+                        <li><a class="dropdown-item" href="UserProfile.php"><i class="bi bi-person-circle me-2"></i>Profile</a></li>
+                        <li>
+                          <?php echo
+                            '<a class="dropdown-item" href="Settings.php?clUrID='.$clUrID.'">'
+                            ?>
+                          <i class="bi bi-gear-fill me-2"></i>Settings</a></li>
                         <li><a class="dropdown-item" href="../includes/logout.php"><span class="glyphicon me-2">&#xe017;</span>Logout</a></li>
                       </ul>
                     </div>
@@ -127,7 +129,11 @@ $userQuery = mysqli_query($connectdb, "SELECT * FROM tbusers where clUrID = $clU
                           <hr>
                           <div class="row mt-1 mb-1">
                             <div class="col-sm-12">
-                              <a class="btn btn-info bg-primary" style="color: white;" target="__blank" href="#">Edit</a>
+                              <?php
+                              echo
+                              '<a class="btn btn-info bg-primary" style="color: white;" target="__blank" 
+                              href="Settings.php?clUrID='.$clUrID.'">Edit</a>'
+                              ?>
                             </div>
                           </div>
                         </div>
