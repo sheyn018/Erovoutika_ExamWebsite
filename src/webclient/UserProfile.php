@@ -1,20 +1,23 @@
 <?php
 include '../includes/connectdb.php';
 
-$clUrID = $_SESSION['clUrID'];
+/**
+ * Change the stuffs before if statement inside the if statement
+ */
+if($_SESSION['client_sid']==session_id())
+{
 
-$userQuery = mysqli_query($connectdb, "SELECT * FROM tbusers where clUrID = $clUrID");
-  while($row = mysqli_fetch_array($userQuery)){
-    $clUrUsername = $row['clUrUsername'];
-    $clUrFirstname = $row['clUrFirstname'];
-    $clUrLastname = $row['clUrLastname'];
-    $clUrcontact_num = $row['clUrcontact_num'];
-    $clUremail = $row['clUremail'];
-    $clUraddress = $row['clUraddress'];
-}
+  $clUrID = $_SESSION['clUrID'];
 
-	if($_SESSION['client_sid']==session_id())
-	{
+  $userQuery = mysqli_query($connectdb, "SELECT * FROM tbusers where clUrID = $clUrID");
+    while($row = mysqli_fetch_array($userQuery)){
+      $clUrUsername = $row['clUrUsername'];
+      $clUrFirstname = $row['clUrFirstname'];
+      $clUrLastname = $row['clUrLastname'];
+      $clUrcontact_num = $row['clUrcontact_num'];
+      $clUremail = $row['clUremail'];
+      $clUraddress = $row['clUraddress'];
+    }
 		?>
 <!DOCTYPE html>
 <html lang="en">
@@ -38,29 +41,31 @@ $userQuery = mysqli_query($connectdb, "SELECT * FROM tbusers where clUrID = $clU
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" />
 
 	<!-- Custom CSS -->
-	<link rel="stylesheet" href="src/css/ExamListStyle.css">
+	<link rel="stylesheet" href="../css/ExamListStyle.css">
 </head>
 
 <body>
 	<header class="bg-white border-5 border-bottom border-primary">
         <nav class="navbar navbar-expand-lg navbar-light bg-light ms-5 me-5">
-            <a class="navbar-brand" href="#"><img src="src/images/Logo2.png" style="height: 60px;"></a>
+            <a class="navbar-brand" href="#"><img src="../images/Logo2.png" style="height: 60px;"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse position-absolute end-0" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-item nav-link  text-dark mt-4" href="#">Home</a>
-                    <a class="nav-item nav-link  text-dark mt-4" href="#">About</a>
-                    <a class="nav-item nav-link  text-dark mt-4" href="#">Contact</a>
+                    <a class="nav-item nav-link  text-dark mt-4" href="../webexam/ExamList.php">Exam List</a>
                     <div class="btn-group">
                       <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="bi bi-person-fill"></i>
                       </button>
                       <ul class="dropdown-menu dropdown-menu-end">
-                        <li><a class="dropdown-item" href="#"><i class="bi bi-person-circle me-2"></i>Profile</a></li>
-                        <li><a class="dropdown-item" href="#"><i class="bi bi-gear-fill me-2"></i>Settings</a></li>
+                        <li><a class="dropdown-item" href="UserProfile.php"><i class="bi bi-person-circle me-2"></i>Profile</a></li>
+                        <li>
+                          <?php echo
+                            '<a class="dropdown-item" href="Settings.php?clUrID='.$clUrID.'">'
+                            ?>
+                          <i class="bi bi-gear-fill me-2"></i>Settings</a></li>
                         <li><a class="dropdown-item" href="../includes/logout.php"><span class="glyphicon me-2">&#xe017;</span>Logout</a></li>
                       </ul>
                     </div>
@@ -127,7 +132,11 @@ $userQuery = mysqli_query($connectdb, "SELECT * FROM tbusers where clUrID = $clU
                           <hr>
                           <div class="row mt-1 mb-1">
                             <div class="col-sm-12">
-                              <a class="btn btn-info bg-primary" style="color: white;" target="__blank" href="#">Edit</a>
+                              <?php
+                              echo
+                              '<a class="btn btn-info bg-primary" style="color: white;" target="__blank" 
+                              href="Settings.php?clUrID='.$clUrID.'">Edit</a>'
+                              ?>
                             </div>
                           </div>
                         </div>
@@ -139,6 +148,13 @@ $userQuery = mysqli_query($connectdb, "SELECT * FROM tbusers where clUrID = $clU
                         <h1>COMPLETED EXAMS</h1>
                     </div>
 
+                    <!--
+                      Completed Exams documentation:
+
+                      Solutions
+                        Easy way - flexbox that has responsive cards
+                        Hard way - looping like the box of stars problem way back before
+                    -->
                     <div class="row gutters-sm mt-5">
                         <div class="col-sm-4 mb-3">
                           <div class="card h-100">

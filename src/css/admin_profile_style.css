@@ -141,46 +141,35 @@ a{text-decoration: none}
     margin-top: 1rem
 }
 
-/* Profile Banner */
-#i--row--banner{
-    background: #0C2A73;
-}
-
-#i--banner--dp{
-    height: auto;
-    width: 7.5rem
-}
-
-#i--line--blue{
+/* Profile Section */
+#i--line--profile{
     background: #2055B5;
     height: .5rem;
-    width: 17rem
+    width: 9rem
 }
 
-/* History Cards */
+/* Account Section */
+#i--line--account{
+    background: #2055B5;
+    height: .5rem;
+    width: 10rem
+}
+
+#i--button--up{
+    width: 100%
+}
+
+/* Cards */
 .card {
     border-color: #0C2A73;
     border-radius: .5rem;
     border-width: .3rem;
-    flex-direction: row;
-}
-
-.card img {
-    height: 150px;
 }
 
 #i--line--card{
     background: #2055B5;
     height: .3rem;
     width: 8.5rem
-}
-
-#i--button--edit{
-    background: #2055B5;
-}
-
-#i--button--check{
-     background: #2055B5;
 }
 
 .show{left: 0}
@@ -210,25 +199,21 @@ a{text-decoration: none}
         height: calc(var(--header-height) + 1rem);
         padding: 0 2rem 0 calc(var(--nav-width) + 2rem)
     }
-
+    
     .header_img{
         width: 50px;
         height: 50px
     }
-
+    
     .header_img img{width: 45px}
-
+    
     .l-navbar{
         left: 0;
         padding: 1rem 1rem 0 0;
         width: 6rem;
     }
-
-    .show{width: calc(var(--nav-width) + 156px)}
-
+    
+    #nav-bar.show{width: calc(var(--nav-width) + 156px)}
+    
     .body-pd{padding-left: calc(var(--nav-width) + 188px)}
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> c973e08478a02aa6990706f977f4db387653f360
