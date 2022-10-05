@@ -36,7 +36,12 @@
                 <h4 class="info2" style="margin-left: 5px; line-height: 40px;">We are team of Engineers and IT making <br> Solutions
                     for Robotics, Automation, <br> Electronics and ICT.</h4>
                 <br>
-                <a><button class="btn btn-outline-primary" id="show-login">Login | Signup</button></a>
+                <!--
+                  Note:
+                      I re-path the login first because the popup doesnt have
+                      the html form attribute to collate the inputs 
+                -->
+                <a href="src/login_template.php"><button class="btn btn-outline-primary" id="show-login">Login | Signup</button></a>
 
                 <div class="popup">
                     <div class="close-btn">&times;</div>
