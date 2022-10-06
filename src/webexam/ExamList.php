@@ -18,13 +18,13 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" />
 
 	<!-- Custom CSS -->
-	<link rel="stylesheet" href="src/css/ExamListStyle.css">
+	<link rel="stylesheet" href="../css/ExamListStyle.css">
 </head>
 
 <body>
 	<header class="bg-white border-5 border-bottom border-primary">
         <nav class="navbar navbar-expand-lg navbar-light bg-light ms-5 me-5">
-            <a class="navbar-brand" href="#"><img src="src/images/Logo2.png" style="height: 60px;"></a>
+            <a class="navbar-brand" href="#"><img src="../images/Logo2.png" style="height: 60px;"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
