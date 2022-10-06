@@ -1,5 +1,7 @@
-<!-- Language: PHP -->
 <?php
+include '../includes/connectdb.php';
+	if($_SESSION['admin_sid']==session_id())
+	{
 		?>
 <!DOCTYPE html>
 <html>
@@ -24,7 +26,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 
         <!-- Custom CSS -->
-        <link rel="stylesheet" href="src/css/admin_examlist_style.css">
+        <link rel="stylesheet" href="../css/admin_examlist_style.css">
     </head>
 
     <header class="header" id="header">
@@ -33,11 +35,11 @@
             </div>
             <div id="i--account--admin">
                 <div class="header_img">
-                    <img src="src/images/Display Picture Icon.png" alt="display picture">
+                    <img src="../images/Display Picture Icon.png" alt="display picture">
                 </div>
                 <div>
                     <button type="button" class="btn btn-outline-light ms-4 mt-2">
-                        <a href="#" id="i--button--logout">Logout</a>
+                        <a href="../includes/logout.php" id="i--button--logout">Logout</a>
                     </button>
                 </div>
             </div>
@@ -50,16 +52,16 @@
                 <div>
                     <a href="#" class="nav_logo">
                         <i>
-                            <img src="src/images/Logo.png" alt="Erovoutika Logo" id="i--logo--erovoutika">
+                            <img src="../images/Logo.png" alt="Erovoutika Logo" id="i--logo--erovoutika">
                         </i>
                         <span class="nav_logo-name fs-5">Erouvotika</span>
                     </a>
                     <div class="nav_list">
-                        <a href="#" class="nav_link">
+                        <a href="AdminHome.php" class="nav_link">
                             <i class='bx bx-grid-alt nav_icon'></i>
                             <span class="nav_name">Dashboard</span>
                         </a>
-                        <a href="#" class="nav_link">
+                        <a href="AdminProfile.php" class="nav_link">
                             <i class='bx bx-user nav_icon'></i>
                             <span class="nav_name">Edit Profile</span>
                         </a>
@@ -83,7 +85,14 @@
                 </div>
                 <button type="button" class="btn btn-primary ms-3 mb-3">
                     <i class="bi bi-pencil-square"></i>
+                    <!--
+                        Temporarily enclosed this in <a> element.
+                            Button is usually used in form, modal.
+                            Not to redirect a page hehehe thank you~
+                    -->
+                    <a href="adminsignup_template.php">
                     <span class="nav_name" id="i--label--signout">Sign Up</span>
+                    </a>
                 </button>
             </nav>
         </div>
@@ -106,7 +115,7 @@
                     <div class="col-12">
                         <div class="row">
                             <div class="card">
-                                <img src="src/images/Logo.png" alt="Admin" class="rounded-circle ms-1 mt-2 mb-2" width="150">
+                                <img src="../images/Logo.png" alt="Admin" class="rounded-circle ms-1 mt-2 mb-2" width="150">
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col-sm-9 col-md-9 col-lg-10 mt-3">
@@ -173,7 +182,7 @@
         <!--Container Main end-->
 
         <!-- Custom Javascript -->
-        <script src="src/javascript/admin_home_script.js"></script>
+        <script src="../javascript/admin_home_script.js"></script>
 
         <!-- JavaScript Bundle with Popper -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
@@ -186,5 +195,13 @@
     </footer>
 </html>
 <?php
-
+	}else
+	{
+		if($_SESSION['client_sid']==session_id()){
+			header("location:404.php");		
+		}
+		else{
+				header("location:../login_template.php");
+			}
+	}
 ?>

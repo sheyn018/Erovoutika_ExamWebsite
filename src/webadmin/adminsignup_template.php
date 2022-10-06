@@ -1,3 +1,8 @@
+<?php
+include '../includes/connectdb.php';
+	if($_SESSION['admin_sid']==session_id())
+	{
+		?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -63,8 +68,23 @@
 
         </form>
 
-        <a href="admintemplate.php">
+        <a href="AdminHome.php">
             <p>Return</p>
         </a>
     </body>
 </html>
+<?php
+	}else
+	{
+		if($_SESSION['staff_sid']==session_id()){
+			header("location:404.php");		
+		}
+		else{
+			if($_SESSION['customer_sid']==session_id()){
+				header("location:404.php");		
+			}else{
+				header("location:../login_template.php");
+			}
+		}
+	}
+?>
