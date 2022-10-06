@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
   </head>
   <body>
 
     <header>
-      <a href="" class="brand"><img src="src/images/logo.png"></a>
+      <a href="" class="brand"><img src="../images/logo.png"></a>
       <div class="menu">
         <div class="btn">
           <i class="fas fa-times close-btn"></i>
@@ -41,7 +41,7 @@
                       I re-path the login first because the popup doesnt have
                       the html form attribute to collate the inputs 
                 -->
-                <a href="src/login_template.php"><button class="btn btn-outline-primary" id="show-login">Login | Signup</button></a>
+                <a href="../login_template.php"><button class="btn btn-outline-primary" id="show-login">Login | Signup</button></a>
 
                 <div class="popup">
                     <div class="close-btn">&times;</div>
@@ -107,5 +107,5 @@
     });
     </script>
 
-  </body>
+  </body> 
 </html>
