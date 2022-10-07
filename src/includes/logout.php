@@ -1,5 +1,8 @@
 <?php
     session_start();
 	session_destroy();
-	header("location: ../login.php");
+	/*
+	 * Change this pathing when the login client is pushed
+	 */
+	header("location: ../login_template.php");
 ?>

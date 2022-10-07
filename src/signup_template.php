@@ -25,7 +25,7 @@
             <br>
 
             <label for="clUrPassword">Password</label>
-            <input type="password" name="clUrFirstname" placeholder=" Password ">
+            <input type="password" name="clUrPassword" placeholder=" Password ">
             
             <br>
 
@@ -47,7 +47,16 @@
 
         </form>
 
-        <a href="../index.php">
+        <p>Already have an account?</p>
+        <a href="login_template.php">
+           
+            <button>
+                Log-in
+            </button>
+        </a>
+
+
+        <a href="../index_template.php">
             <p>Return to Homepage</p>
         </a>
     </body>
