@@ -9,13 +9,13 @@
         <link rel="stylesheet" href="">
     </head>
     <body>
-        <a href="src/login.php">
+        <a href="src/login_template.php">
             <button>
                 Sign-In
             </button>
         </a>
 
-        <a href="src/signup.php">
+        <a href="src/signup_template.php">
             <button>
                 Sign-Up
             </button>

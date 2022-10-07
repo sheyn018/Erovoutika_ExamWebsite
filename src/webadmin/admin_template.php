@@ -22,7 +22,7 @@ include '../includes/connectdb.php';
 <body>
     <p>im admin</p>
     
-	<a href="adminsignup.php">
+	<a href="adminsignup_template.php">
 		<button>
 			signup
 		</button>
@@ -39,15 +39,11 @@ include '../includes/connectdb.php';
 <?php
 	}else
 	{
-		if($_SESSION['staff_sid']==session_id()){
+		if($_SESSION['client_sid']==session_id()){
 			header("location:404.php");		
 		}
 		else{
-			if($_SESSION['customer_sid']==session_id()){
-				header("location:404.php");		
-			}else{
-				header("location:../login.php");
+				header("location:../login_template.php");
 			}
-		}
 	}
 ?>

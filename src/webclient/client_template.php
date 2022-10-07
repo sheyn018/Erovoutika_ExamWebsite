@@ -22,8 +22,23 @@ include '../includes/connectdb.php';
 	<link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
+
+		/* For Phase 2 
+		 * Include this "include_once" to call the header and footer of the webclient files.
+		 * Make sure that only one file [header and footer] will be called in every other webclients' files.
+		 */
+
+	<?php 
+	include_once 'header.php';
+	?>
+
     <p>im client</p>
     <a href="../includes/logout.php">logout</a>
+
+	<?php 
+	include_once 'footer.php';
+	?>
+
 </body>
 </html>
 <?php
@@ -33,11 +48,7 @@ include '../includes/connectdb.php';
 			header("location:404.php");		
 		}
 		else{
-			if($_SESSION['staff_sid']==session_id()){
-				header("location:404.php");		
-			}else{
-				header("location:login.php");
+				header("location:../login_template.php");
 			}
-		}
 	}
 ?>
