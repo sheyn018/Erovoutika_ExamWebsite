@@ -1,0 +1,21 @@
+/*Spacing*/
+.mr-03{
+    margin-right: 3%;
+}
+
+.mr-1{
+    margin-right: 10%;
+}
+
+.ml-1{
+    margin-left: 17%;
+}
+
+.ml-7{
+    margin-left: 70%;
+}
+
+/*Icons*/
+.bi-person-fill{
+    font-size: 40px;
+}
