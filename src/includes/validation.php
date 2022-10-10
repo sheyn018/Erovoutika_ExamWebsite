@@ -1,5 +1,5 @@
 <?php
-include 'connectdb.php';
+include '../includes/connectdb.php';
 $success=false;
 
 $username = $_POST['username'];
@@ -41,7 +41,7 @@ if($success == true){
         else
         {  echo "<script>
 			alert('Invalid username or password.');  
-			window.location = '../login.php';
+			window.location = '../index.php';
 			</script>"; 
         }
 }
