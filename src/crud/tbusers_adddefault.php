@@ -15,13 +15,13 @@ $usersquery = "INSERT INTO tbusers ( clUrFirstname, clUrLastname, clUrUsername, 
 
 if(mysqli_query($connectdb, $usersquery)){
   echo "<script> 
-  alert('Category successfully added!'); 
+  alert('Successfully Signed Up!'); 
   window.location = '../login.php'; 
   </script>";  
   
 } else{
   echo "<script>
-  alert('Failed to add.');  
+  alert('Failed to Sign Up.');  
   window.location = '../signup.php';
   </script>"; 
   

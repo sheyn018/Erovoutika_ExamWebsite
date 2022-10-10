@@ -20,6 +20,14 @@
             <input type="submit" value="Log In">
         </form>
 
+        <p>Dont have an account yet?</p>
+        <a href="signup_template.php">
+           
+            <button>
+                Sign-Up
+            </button>
+        </a>
+
         <a href="../index.php">
             <p>Return to Homepage</p>
         </a>
