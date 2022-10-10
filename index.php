@@ -12,126 +12,125 @@ include_once 'src/includes/header.php';
 
  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
  <link rel="stylesheet" href="src/css/homestyle.css">
+ <script src="https://kit.fontawesome.com/24d5cf3efd.js" crossorigin="anonymous"></script>
 
-<!-- Banner Div -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"> 
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
 </head>
-<body>
+  <body>
+    <!-- Home -->
+    <section class="section-main" id="home">
+      <div class="d-flex justify-content-start">
+			  <div class="home1">
+          <img src="src/images/login.png" id="logo2" style="position:absolute";>
+              <br><br>
+              <h4 class="info1" id="info1" style="margin-left: 730px;">One-Stop-Shop Innovative Solutions</h3>
+              <br>
+              <h5 class="info2" id="info2"style="margin-left: 730px; line-height: 40px;">We are team of Engineers and IT making <br> Solutions for Robotics, Automation, <br> Electronics and ICT.</h4>
+              <br><br><br><br>
+              <a href="" id="exam-list" style="--clr:#1e9bff"><span>Exam List</span><i></i></a>
+        </div>
+      </div>
+    </section> 
+
     <!-- About Us -->
-    <section class="aboutus">
-    <div class="about-section" id="about-section">
-        <div class="inner-container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="site-heading text-center">
-                        <h2><span>About Us</span></h2>
-                        <h4>What is Erovoutika?</h4>
-                    </div>
+    <section class="about-section" id="about-section">
+    	<div class="container">
+        <div class="row clearfix">
+          <!--Content Column-->
+              <div class="content-column col-md-6 col-sm-12 col-xs-12">
+                <div class="inner-column">
+                  <div class="sec-title">
+                    <div class="title">About Us</div>
+                    <h2>Who We Are</h2>
+                  </div>
+                    
+                  <div class="text">Erovoutika is a respected and experienced Automation and Robotics Company. Our highly professional teams, with in-depth knowledge of each jurisdiction, has been successfully deliver customer needs</div>
+                  <h5>Our Aim</h5>
+                  <div class="text">is to assist our clients in getting their needs and requirements in the easiest and fastest possible time in a most professional manner. We provide the highest quality service at the most reasonable cost.</div>
+                    <a href="about.html" class="theme-btn btn-style-three">Read More</a>
                 </div>
-            </div>
-            <p class="text">
-                Erovoutika is a respected and experienced Automation and Robotics Company. Our highly professional team, with in-depth knowledge of each jurisdiction, has been successfully deliver customer needs .</p>
-                <li><span>Robotics</span></li>
-                <li><span>Automation</span></li>
-                <li><span>Electronics</span></li>
-                <li><span>Information and Communication Technology</span></li>
-                <br>
-               <p class="text"> Our aim is to assist our clients in getting their nees and requirement in the quickest possible time frame, in the most professional manner. We pride ourselves on providing the highest qualuity service, at the most reasonable cost.</p>
-            </p>
+              </div>
+                
+          <!--Image Column-->
+              <div class="image-column col-md-6 col-sm-12 col-xs-12">
+                <div class="inner-column " data-wow-delay="0ms" data-wow-duration="1500ms">
+                  <div class="image">
+                    <img src="src/images/working2.gif" style="height: 530px; width: 440px;" id="about-img" alt="">
+                      <div class="overlay-box">
+                        <div class="year-box"><span class="number">3</span>Years <br> Experience <br> Working</div>
+                      </div>
+                  </div>
+                </div>
+              </div>   
         </div>
-    </div>
+      </div>
     </section>
-    <!-- Services -->
-    <div class="service" id="service">
-    <section class="we-offer-area text-center bg-gray">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="site-heading text-center">
-                        <h2><span>Services</span></h2>
-                        <h4>Good Service is Good Business</h4>
-                    </div>
-                </div>
+
+    <!-- Partnership -->
+    <section class="partnership"id="partnership">
+      <div class="row">
+        <div class="col-md-12">
+            <div class="site-heading text-center">
+            <h2><span>Partnership Industries</span></h2>   
             </div>
-                <div class="row our-offer-items less-carousel">
-                    <!-- Single Item -->
-                    <div class="col-md-4 col-sm-6 equal-height">
-                        <div class="item">
-                            <i class="fa-solid fa-certificate"></i>
-                            <h4>Training and Certifications</h4>
-                            <p>
-                                Live and Online Robotics and Automation Trainings. COMPTIA and Microsoft Certification Reviews 
-                            </p>
-                        </div>
-                    </div>
-                    <!-- End Single Item -->
-
-                    <!-- Single Item -->
-                    <div class="col-md-4 col-sm-6 equal-height">
-                        <div class="item">
-                            <i class="fa-solid fa-robot"></i>
-                            <h4>Automation Solutions</h4>
-                            <p>
-                                PLC, HMI, and SCADA Development, System Integration 
-                            </p>
-                        </div>
-                    </div>
-                    <!-- End Single Item -->
-
-                    <!-- Single Item -->
-                    <div class="col-md-4 col-sm-6 equal-height">
-                        <div class="item">
-                            <i class="fa-light fa-browser"></i>
-                            <h4>Web Development</h4>
-                            <p>
-                                Full-Package Web Development, Design, and SEO Marketing. 
-                            </p>
-                        </div>
-                    </div>
-                    <!-- End Single Item -->
-
-                    <!-- Single Item -->
-                    <div class="col-md-4 col-sm-6 equal-height">
-                        <div class="item">
-                            <i class="fas fa-tachometer-alt"></i>
-                            <h4>Research and Development</h4>
-                            <p>
-                                Software and Hardware Design, MATLAB, OpenCV, Python, Arduino, RPI Machine Development
-                            </p>
-                        </div>
-                    </div>
-                    <!-- End Single Item -->
-
-                    <!-- Single Item -->
-                    <div class="col-md-4 col-sm-6 equal-height">
-                        <div class="item">
-                            <i class="fas fa-recycle"></i>
-                            <h4>Software Development</h4>
-                            <p>
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                            </p>
-                        </div>
-                    </div>
-                    <!-- End Single Item -->
-
-                    <!-- Single Item -->
-                    <div class="col-md-4 col-sm-6 equal-height">
-                        <div class="item">
-                            <i class="fas fa-headset"></i>
-                            <h4>24/7 Support</h4>
-                            <p>
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                            </p>
-                        </div>
-                    </div>
-                    <!-- End Single Item -->
-                </div>
         </div>
+      <div class="logo-slider">
+        <div class="logo-slide-track">
+          <div class="slide">
+            <img src="src/images/client-1.png" alt="" style="height: 100px; width: 170px;" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </div>
+          <div class="slide">
+            <img src="src/images/client-2.png" alt="" style="height: 100px; width: 170px;" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </div>
+          <div class="slide">
+            <img src="src/images/client-3.png" alt="" style="height: 100px; width: 170px;" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </div>
+          <div class="slide">
+            <img src="src/images/client-4.png" alt="" style="height: 100px; width: 170px;" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </div>
+          <div class="slide">
+            <img src="src/images/client-6.png" alt="" style="height: 100px; width: 170px;" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </div>
+          <div class="slide">
+            <img src="src/images/client-1.png" alt="" style="height: 100px; width: 170px;" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </div>
+          <div class="slide">
+            <img src="src/images/client-2.png" alt="" style="height: 100px; width: 170px;" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </div>
+          <div class="slide">
+            <img src="src/images/client-3.png" alt="" style="height: 100px; width: 170px;" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </div>
+          <div class="slide">
+            <img src="src/images/client-4.png" alt="" style="height: 100px; width: 170px;" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </div>
+          <div class="slide">
+            <img src="src/images/client-5.png" alt="" style="height: 100px; width: 170px;" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </div>
+          <div class="slide">
+            <img src="src/images/client-6.png" alt="" style="height: 100px; width: 170px;" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </div>
+          <div class="slide">
+            <img src="src/images/client-1.png" alt="" style="height: 100px; width: 170px;" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </div>
+          <div class="slide">
+            <img src="src/images/client-2.png" alt="" style="height: 100px; width: 170px;" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </div>
+          <div class="slide">
+            <img src="src/images/client-3.png" alt="" style="height: 100px; width: 170px;" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </div>
+          <div class="slide">
+            <img src="src/images/client-4.png" alt="" style="height: 100px; width: 170px;" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </div>
+          <div class="slide">
+            <img src="src/images/client-5.png" alt="" style="height: 100px; width: 170px;" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </div>
+          <div class="slide">
+            <img src="src/images/client-6.png" alt="" style="height: 100px; width: 170px;" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </div>
+        </div>
+      </div>
     </section>
-    </div>
-    
+    <br><br><br><br><br><br><br><br>
+
     <!-- Porfolio -->
     <section class="porfolio"id="porfolio">
         <div class="row">
@@ -142,133 +141,343 @@ include_once 'src/includes/header.php';
                 </div>
             </div>
         </div>
-        <ul class="honeycomb" lang="es">
-      <li class="honeycomb-cell">
-        <img class="honeycomb-cell__image" src="src/images/auto-1.jpg">
-        <div class="honeycomb-cell__title">Andon System</div>
-      </li>
-      <li class="honeycomb-cell">
-        <img class="honeycomb-cell__image" src="src/images/auto-2.jpg">
-        <div class="honeycomb-cell__title">Network Troubleshooting</div>
-      </li>
-      <li class="honeycomb-cell">
-        <img class="honeycomb-cell__image" src="src/images/auto-3.jpg">
-        <div class="honeycomb-cell__title">Panel Inspection</div>
-      </li>
-      <li class="honeycomb-cell">
-        <img class="honeycomb-cell__image" src="src/images/auto-4.jpg">
-        <div class="honeycomb-cell__title">PLC Programming</div>
-      </li>
-      <li class="honeycomb-cell">
-        <img class="honeycomb-cell__image" src="src/images/auto-5.jpg">
-        <div class="honeycomb-cell__title">PLC Programming</div>
-      </li>
-      <li class="honeycomb-cell">
-        <img class="honeycomb-cell__image" src="src/images/elec-1.jpg">
-        <div class="honeycomb-cell__title">PLC Programming</div>
-      </li>
-      <li class="honeycomb-cell">
-        <img class="honeycomb-cell__image" src="src/images/elec-5.jpg">
-        <div class="honeycomb-cell__title">PLC Programming</div>
-      </li>
-      <li class="honeycomb-cell honeycomb__placeholder"></li>
-    </ul>
+          <ul class="honeycomb" lang="es">
+          <li class="honeycomb-cell">
+            <img class="honeycomb-cell__image" src="src/images/auto-1.jpg">
+            <div class="honeycomb-cell__title">Andon System</div>
+          </li>
+          <li class="honeycomb-cell">
+            <img class="honeycomb-cell__image" src="src/images/auto-2.jpg">
+            <div class="honeycomb-cell__title">Network Troubleshooting</div>
+          </li>
+          <li class="honeycomb-cell">
+            <img class="honeycomb-cell__image" src="src/images/auto-3.jpg">
+            <div class="honeycomb-cell__title">Panel Inspection</div>
+          </li>
+          <li class="honeycomb-cell">
+            <img class="honeycomb-cell__image" src="src/images/auto-4.jpg">
+            <div class="honeycomb-cell__title">PLC Programming</div>
+          </li>
+          <li class="honeycomb-cell">
+            <img class="honeycomb-cell__image" src="src/images/auto-5.jpg">
+            <div class="honeycomb-cell__title">PLC Programming</div>
+          </li>
+          <li class="honeycomb-cell">
+            <img class="honeycomb-cell__image" src="src/images/elec-1.jpg">
+            <div class="honeycomb-cell__title">PLC Programming</div>
+          </li>
+          <li class="honeycomb-cell">
+            <img class="honeycomb-cell__image" src="src/images/elec-5.jpg">
+            <div class="honeycomb-cell__title">PLC Programming</div>
+          </li>
+          <li class="honeycomb-cell honeycomb__placeholder"></li>
+        </ul>
+    <br><br><br><br><br><br><br><br><br><br>
     </section>
 
-    <!-- Partner -->
+    
+    <!-- Services -->
+    <section class="services" id="services">
+      <div class="row">
+          <div class="col-md-12">
+              <div class="site-heading text-center">
+                  <h2><span>Our Services</span></h2>
+                  <h4>Good Service is Good Business</h4>
+              </div>
+          </div>
+      </div>
+        <div class="row">
+          <div class="col-md-4">
+              <div class="box">
+                  <div class="our-services settings">
+                      <div class="icon"> <img src="https://i.imgur.com/6NKPrhO.png"> </div>
+                      <h4>Training and Certifications</h4>
+                      <p>Training to develop new skills and advance their SESSIONeers There is specialized certification for training, learning and development professionals who are seeking ways to increase business performance through innovative and collaborative training methods</p><br>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-4">
+              <div class="box">
+                  <div class="our-services speedup">
+                      <div class="icon"> <img src="https://i.imgur.com/KMbnpFF.png"> </div>
+                      <h4>Automation Solutions</h4>
+                      <p>Automated Solutions develops and sells PLC driver and industrial communications software products for industrial communications software products for industrial and process automation.</p><br><br><br>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-4">
+              <div class="box">
+                  <div class="our-services privacy">
+                      <div class="icon"> <img src="https://i.imgur.com/AgyneKA.png"> </div>
+                      <h4>Robotics</h4>
+                      <p>Robotics is the intersection of science, engineering and technology that produces machines, called robots, that replicate or substitute for human actions.</p><br><br><br><br>
+                  </div>
+              </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+              <div class="box">
+                  <div class="our-services backups">
+                      <div class="icon"> <img src="https://i.imgur.com/vdH9LKi.png"> </div>
+                      <h4>Research and Development</h4>
+                      <p>Research and development include activities that companies undertake to innovate and introduce new products and services. It is often the first stage in the development process.</p><br><br><br>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-4">
+              <div class="box">
+                  <div class="our-services ssl">
+                      <div class="icon"> <img src="https://i.imgur.com/v6OnUqu.png"> </div>
+                      <h4>Cybersecurity</h4>
+                      <p>Cybersecurity is the application of technologies, processes, and controls to protect systems, networks, programs, devices, and data from cyberattacks.</p><br><br><br><br>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-4">
+              <div class="box">
+                  <div class="our-services database">
+                      <div class="icon"> <img src="https://i.imgur.com/VzjZw9M.png"> </div>
+                      <h4>Blockchain</h4>
+                      <p>Blockchains are best known for their crucial role in cryptocurrency systems, such as Bitcoin, for maintaining a secure and decentralized record of transactions.</p><br><br><br><br>
+                  </div>
+              </div>
+          </div>
+        </div>
+    </section>
+    <br><br><br><br><br>
 
-    <br><br>
+    <!--Pricing Table-->
+    <div id="price">
+    <div class="row">
+          <div class="col-md-12">
+              <div class="site-heading text-center">
+                  <h2><span>Training Program</span></h2>
+                  <h4>Ber Months Promo</h4>
+              </div>
+          </div>
+      </div>
+  <!--price tab-->
+  <div class="plan">
+    <div class="plan-inner">
+      <div class="entry-title">
+        <h3>Package 1</h3>
+        <div class="price">₱250<span>/PER SESSION</span>
+        </div>
+      </div>
+      <div class="entry-content">
+        <ul>
+          <li><strong>1x</strong> HTML Course</li>
+          <li><strong>2x</strong> CSS Course</li>
+          <li><strong>3x</strong> JavaScript Course</li>
+          <li><strong>Free</strong> Front End Course</li>
+          <li><strong>Unlimited</strong> Python Course</li>
+        </ul>
+      </div>
+      <div class="btn">
+        <a href="#">Register Now</a>
+      </div>
+    </div>
+  </div>
+  <!-- end of price tab-->
+  <!--price tab-->
+  <div class="plan basic">
+    <div class="plan-inner">
+      <div class="hot">hot</div>
+      <div class="entry-title">
+        <h3>Package 2</h3>
+        <div class="price">₱350<span>/PER SESSION</span>
+        </div>
+      </div>
+      <div class="entry-content">
+        <ul>
+          <li><strong>1x</strong> SQL Course</li>
+          <li><strong>2x</strong> PHP Course</li>
+          <li><strong>3x</strong> Bootstrap 5</li>
+          <li><strong>Free</strong> C++ Course</li>
+          <li><strong>Unlimited</strong> C# Course</li>
+        </ul>
+      </div>
+      <div class="btn">
+        <a href="#">Register Now</a>
+      </div>
+    </div>
+  </div>
+  <!-- end of price tab-->
+  <!--price tab-->
+  <div class="plan standard">
+    <div class="plan-inner">
+      <div class="entry-title">
+        <h3>Package 3</h3>
+        <div class="price">₱450<span>/PER SESSION</span>
+        </div>
+      </div>
+      <div class="entry-content">
+        <ul>
+          <li><strong>2x</strong> jQuery Course</li>
+          <li><strong>Free</strong> React.js Course</li>
+          <li><strong>Custom</strong> Java Course</li>
+          <li><strong>2x</strong> Numpy Course</li>
+          <li><strong>Free</strong> Panda Course</li>
+        </ul>
+      </div>
+      <div class="btn">
+        <a href="#">Register Now</a>
+      </div>
+    </div>
+  </div>
+  <!-- end of price tab-->
+  <!--price tab-->
+  <div class="plan ultimite">
+    <div class="plan-inner">
+      <div class="entry-title">
+        <h3>Package 4</h3>
+        <div class="price">₱500<span>/PER SESSION</span>
+        </div>
+      </div>
+      <div class="entry-content">
+        <ul>
+          <li><strong>1x</strong> Typescript Course</li>
+          <li><strong>2x</strong> XML Course</li>
+          <li><strong>3x</strong> Data Analytics Course</li>
+          <li><strong>Free</strong> Cyber Security Course</li>
+          <li><strong>Unlimited</strong> Accessibility Course</li>
+        </ul>
+      </div>
+      <div class="btn">
+        <a href="#">Register Now</a>
+      </div>
+    </div>
+  </div>
+  <!-- end of price tab-->
+</div>
+<br><br><br><br><br><br><br><br>
+
+    <!-- Latest Article -->
+    <section class="blog">
+    <div class="col-md-12">
+      <h4 id="article">Latest Article</h4>
+    </div><br><br>
+    <div class="band">
+  <div class="item-1">
+    <a href="https://design.tutsplus.com/articles/international-artist-feature-malaysia--cms-26852" class="card">
+      <div class="thumb" style="background-image: url(src/images/article1.avif);"></div>
+      <article>
+        <h1>Responsive images & art direction</h1>
+        <span>Mary Winkler</span>
+      </article>
+    </a>
+  </div>
+  <div class="item-2">
+    <a href="https://webdesign.tutsplus.com/articles/how-to-conduct-remote-usability-testing--cms-27045" class="card">
+      <div class="thumb" style="background-image: url(src/images/article2.avif);"></div>
+      <article>
+        <h1>Dark mode</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem, veniam nam beatae dicta corporis aspernatur!</p>
+        <span>Harry Brignull</span>
+      </article>
+    </a>
+  </div>
+  <div class="item-3">
+    <a href="https://design.tutsplus.com/articles/envato-tuts-community-challenge-created-by-you-july-edition--cms-26724" class="card">
+      <div class="thumb" style="background-image: url(src/images/article3.avif);"></div>
+      <article>
+        <h1>Macro & micro layouts </h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt nemo suscipit quidem repudiandae ipsam aspernatur.</p>
+        <span>Melody Nieves</span>
+      </article>
+    </a>
+  </div>
+  <div class="item-4">
+    <a href="https://webdesign.tutsplus.com/tutorials/how-to-code-a-scrolling-alien-lander-website--cms-26826" class="card">
+      <div class="thumb" style="background-image: url(src/images/article4.avif);"></div>
+      <article>
+        <h1>Container queries</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem, veniam nam beatae dicta corporis aspernatur!</p>
+        <span>Kezz Bracey</span>
+      </article>
+    </a>
+  </div>
+  <div class="item-5">
+    <a href="https://design.tutsplus.com/tutorials/stranger-things-inspired-text-effect--cms-27139" class="card">
+      <div class="thumb" style="background-image: url(src/images/article5.avif);"></div>
+      <article>
+        <h1>Accessible Animation</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem, veniam nam beatae dicta corporis aspernatur!</p>
+        <span>Rose</span>
+      </article>
+    </a>
+  </div>
+  <div class="item-6">
+    <a href="https://photography.tutsplus.com/articles/5-inspirational-business-portraits-and-how-to-make-your-own--cms-27338" class="card">
+      <div class="thumb" style="background-image: url(src/images/article6.avif);"></div>
+      <article>
+        <h1>Working with Media</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem, veniam nam beatae dicta corporis aspernatur!</p>
+        <span>Marie Gardiner</span>
+      </article>
+    </a>
+  </div>
+  <div class="item-7">
+    <a href="https://webdesign.tutsplus.com/articles/notes-from-behind-the-firewall-the-state-of-web-design-in-china--cms-22281" class="card">
+      <div class="thumb" style="background-image: url(src/images/article7.avif);"></div>
+      <article>
+        <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, ratione?</h1>
+        <span>Kendra Schaefer</span>
+      </article>
+    </a>
+  </div>
+</div>
+    </section>
+    <br><br><br><br><br><br><br><br>
 
     <!-- Contact Us -->
+    <div class="row">
+          <div class="col-md-12">
+              <div class="site-heading text-center">
+                  <h2><span>Contact Us</span></h2>
+                  <h4>Get In Touch With Us!</h4>
+              </div>
+          </div>
+      </div>
     <section class="contact" id="contact">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="site-heading text-center">
-                    <h2><span>Contact Us</span></h2>
-                    <h4>Need to get in touch with us?</h4>
-
-                    <section class="container mt-5">
-                        <!--Contact heading-->
-                        <div class="row">
-                           <div class="col-sm-12 text-center mb-4">
-                          </div>
-                           <!--Grid column-->
-                           <div class="col-sm-12 mb-4 col-md-5">
-                              <!--Form with header-->
-                              <div class="card border-primary rounded-0">
-                                 <div class="card-header p-0">
-                                    <div class="bg-primary text-white text-center py-2">
-                                       <h3><i class="fa fa-envelope"></i> Write to us:</h3>
-                                       <p class="m-0">We’ll write rarely, but only the best content.</p>
-                                    </div>
-                                 </div>
-                                 <div class="card-body p-3">
-                                    
-                                       <div class="form-group">
-                                       <label> Your name </label>
-                                       <div class="input-group">
-                                          <input value="" type="text" name="data[name]" class="form-control" id="inlineFormInputGroupUsername" placeholder="Your name">
-                                       </div>
-                                     </div>
-                                       <div class="form-group">
-                                          <label>Your email</label>
-                                          <div class="input-group mb-2 mb-sm-0">
-                                             <input type="email" value="" name="data[email]" class="form-control" id="inlineFormInputGroupUsername" placeholder="Email">
-                                          </div>
-                                       </div>
-                                       <div class="form-group">
-                                          <label>Subject</label>
-                                          <div class="input-group mb-2 mb-sm-0">
-                                             <input type="text" name="data[subject]" class="form-control" id="inlineFormInputGroupUsername" placeholder="Subject">
-                                          </div>
-                                       </div>
-                                       <div class="form-group">
-                                          <label>Message</label>
-                                          <div class="input-group mb-2 mb-sm-0">
-                                             <input type="text" class="form-control" name="mesg">
-                                          </div>
-                                       </div>
-                                       <div class="text-center">
-                                          <input type="submit" name="submit" value="Submit" class="btn btn-primary btn-block rounded-0 py-2">
-                                       </div>
-                                  
-                                      </div>
-                                       
-                                 </div>
-                              </div>
-                           <!--Grid column-->
-                           
-                           <!--Grid column-->
-                           <div class="col-sm-12 col-md-7">
-                              <!--Google map-->
-                              <div class="mb-4">
-                                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3862.053115350425!2d121.0089715147584!3d14.538954489841807!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c938ad3ac0df%3A0xd0c8c1f6db892fd9!2sErovoutika%20Electronics%20Robotics%20Automation!5e0!3m2!1sen!2sus!4v1663715646489!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                              </div>
-                              <!--Buttons-->
-                              <div class="row text-center">
-                                 <div class="col-md-4">
-                                    <a class="bg-primary px-3 py-2 rounded text-white mb-2 d-inline-block"><i class="fa fa-map-marker"></i></a>
-                                    <p> Your Address ….. </p>
-                                 </div>
-                                 <div class="col-md-4">
-                                    <a class="bg-primary px-3 py-2 rounded text-white mb-2 d-inline-block"><i class="fa fa-phone"></i></a>
-                                    <p>+91- 90000000</p>
-                                 </div>
-                                 <div class="col-md-4">
-                                    <a class="bg-primary px-3 py-2 rounded text-white mb-2 d-inline-block"><i class="fa fa-envelope"></i></a>
-                                    <p> your@gmail.com</p>
-                                 </div>
-                              </div>
-                           </div>
-                           <!--Grid column-->
-                             </div>
-                     </section>
+        <div class="contact-container">
+            <div class="content">
+                <div class="left-side">
+                    <div class="address details">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div class="topic">Address</div>
+                    <div class="text-one">PARC HOUSE II, Unit 703,</div>
+                    <div class="text-one">Epifanio de los Santos Ave</div>
+                    <div class="text-two">Makati, 1212 Metro Manila</div>
+                    </div>
+                    <div class="phone details">
+                    <i class="fas fa-phone-alt"></i>
+                    <div class="topic">Phone</div>
+                    <div class="text-one">+0098 9893 5647</div>
+                    <div class="text-two">+0096 3434 5678</div>
+                    </div>
+                    <div class="email details">
+                    <i class="fas fa-envelope"></i>
+                    <div class="topic">Email</div>
+                    <div class="text-one">sales@erovoutika.ph</div>
+                    <div class="text-two">erovoutika@gmail.com</div>
+                    </div>
                 </div>
+                    <form action="https://formsubmit.co/421a8ad6d7eed491cf8bf4e8c5cfe624" method="POST">
+                        <div class="right-side">
+                            <h2 style="font-weight: 700">Send us a message</h3><br><br>
+                            <p style="font-size: 12px;">We are open for any suggestion</p><br>
+                            <input name="name" type="text" class="feedback-input" placeholder="Name" />   
+                            <input name="email" type="text" class="feedback-input" placeholder="Email" />
+                            <textarea name="text" class="feedback-input" placeholder="Message"></textarea>
+                            <input type="submit" class="feedback-input" value="SUBMIT"/>
+                        </div>
+                    </form>
             </div>
         </div>
-
     </section>
-
+    <br><br>
     <?php
     include_once 'src/includes/footer.php';
     ?>
