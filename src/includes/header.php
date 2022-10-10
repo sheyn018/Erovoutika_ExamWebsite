@@ -23,58 +23,11 @@
         <a href="#contact">Contact</a>
       </div>
         <a href="src/login_template.php"><button id="loginbtn">Login</button></a>
-        <a href="src/signup_template.php"><button id=signupbtn>Signup</button></a>
-      <div class="btn">
+        <a href="src/signup_template.php"><button id="signupbtn">Signup</button></a>
+      <div class="btn"> 
         <i class="fas fa-bars menu-btn"></i>
       </div>
     </header>  
-
-          <!-- Home -->
-    <section class="section-main" id="home">
-        <div class="d-flex justify-content-start bg-light">
-			<div class="home1">
-
-                <br><br><br><br>
-                <h3 class="info1" style="margin-left: 5px;">One-Stop-Shop Innovative Solutions</h3>
-                <br>
-                <h4 class="info2" style="margin-left: 5px; line-height: 40px;">We are team of Engineers and IT making <br> Solutions
-                    for Robotics, Automation, <br> Electronics and ICT.</h4>
-                <br>
-                <!--
-                  Note:
-                      I re-path the login first because the popup doesnt have
-                      the html form attribute to collate the inputs 
-                -->
-                <a href="../login_template.php"><button class="btn btn-outline-primary" id="show-login">Login | Signup</button></a>
-
-                <div class="popup">
-                    <div class="close-btn">&times;</div>
-                        <div class="form">
-                            <h2>Login</h2>
-                            <div class="form-element">
-                                <label for="email">Username</label>
-                                <input type="text" id="email" placeholder="Enter username">
-                            </div>
-                            <div class="form-element">
-                                <label for="password">Password</label>
-                                <input type="password" id="password" placeholder="Enter password">
-                            </div>
-                            <div class="form-element">
-                                <input type="checkbox" id="remember-me">
-                                <label for="remember-me">Remember Me</label>
-                            </div>
-                            <div class="form-element">
-                                <button>Log in</button>
-                            </div>
-                            <div class="form-element">
-                            <a href="#" style="text-align: center;">Dont have account?</a>
-                            <div>
-                            <button id="show-signup">Sign up</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    </section>
     </body>
 
     <script>
