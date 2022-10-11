@@ -141,23 +141,13 @@ a{text-decoration: none}
     margin-top: 1rem
 }
 
-/* Profile Banner */
-#i--row--banner{
-    background: #0C2A73;
-}
-
-#i--banner--dp{
-    height: auto;
-    width: 7.5rem
-}
-
 #i--line--blue{
     background: #2055B5;
     height: .5rem;
     width: 17rem
 }
 
-/* History Cards */
+/* Cards */
 .card {
     border-color: #0C2A73;
     border-radius: .5rem;
@@ -167,12 +157,6 @@ a{text-decoration: none}
 
 .card img {
     height: 150px;
-}
-
-#i--line--card{
-    background: #2055B5;
-    height: .3rem;
-    width: 8.5rem
 }
 
 #i--button--edit{
@@ -197,8 +181,6 @@ a{text-decoration: none}
     height: 32px;
     background-color: var(--white-color)
 }
-
-.height-100{height:100vh}
 
 @media screen and (min-width: 768px){
     body{

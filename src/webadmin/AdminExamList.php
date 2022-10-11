@@ -106,71 +106,68 @@ include '../includes/connectdb.php';
                         EXAM LIST
                     </div>
                 </div>
+
                 <!-- Blue Line -->
                 <div class="row">
                     <div class="col-3" id="i--line--blue"></div>
                 </div>
-                <!-- Edit Banners -->
+
+                <!-- Cards -->
                 <div class="row my-2 gy-3">
                     <div class="col-12">
-                        <div class="row">
-                            <div class="card">
-                                <img src="../images/Logo.png" alt="Admin" class="rounded-circle ms-1 mt-2 mb-2" width="150">
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-sm-9 col-md-9 col-lg-10 mt-3">
-                                            <h5 class="card-title text-primary text-uppercase fs-1 fw-bold">EXAM NAME</h5>
-                                            <p class="card-text text-primary fs-5">
-                                              Exam Information
-                                            </p>
-                                        </div>
-                                        <div class="col-sm-3 col-md-3 col-lg-2">
-                                            <a href="#" class="btn btn-primary" id="i--button--edit">Edit Exam</a>
-                                            <br>
-                                            <a href="#" class="btn btn-primary mt-2" id="i--button--check">Check Exam</a>
-                                        </div>
+
+                        <div class="card mt-3">
+                            <img src="../images/Logo.png" alt="Admin" class="rounded-circle ms-1 mt-2 mb-2" width="150">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-sm-9 col-md-9 col-lg-10 mt-3">
+                                        <h5 class="card-title text-primary text-uppercase fs-1 fw-bold">EXAM NAME</h5>
+                                        <p class="card-text text-primary fs-5">
+                                          Exam Information
+                                        </p>
+                                    </div>
+                                    <div class="col-sm-3 col-md-3 col-lg-2">
+                                        <a href="#" class="btn btn-primary" id="i--button--edit">Edit Exam</a>
+                                        <br>
+                                        <a href="#" class="btn btn-primary mt-2" id="i--button--check">Check Exam</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="row mt-3">
-                            <div class="card">
-                                <img src="src/images/Logo.png" alt="Admin" class="rounded-circle ms-1 mt-2 mb-2" width="150">
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-sm-9 col-md-9 col-lg-10 mt-3">
-                                            <h5 class="card-title text-primary text-uppercase fs-1 fw-bold">EXAM NAME</h5>
-                                            <p class="card-text text-primary fs-5">
-                                              Exam Information
-                                            </p>
-                                        </div>
-                                        <div class="col-sm-3 col-md-3 col-lg-2">
-                                            <a href="#" class="btn btn-primary" id="i--button--edit">Edit Exam</a>
-                                            <br>
-                                            <a href="#" class="btn btn-primary mt-2" id="i--button--check">Check Exam</a>
-                                        </div>
+                        <div class="card mt-3">
+                            <img src="../images/Logo.png" alt="Admin" class="rounded-circle ms-1 mt-2 mb-2" width="150">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-sm-9 col-md-9 col-lg-10 mt-3">
+                                        <h5 class="card-title text-primary text-uppercase fs-1 fw-bold">EXAM NAME</h5>
+                                        <p class="card-text text-primary fs-5">
+                                          Exam Information
+                                        </p>
+                                    </div>
+                                    <div class="col-sm-3 col-md-3 col-lg-2">
+                                        <a href="#" class="btn btn-primary" id="i--button--edit">Edit Exam</a>
+                                        <br>
+                                        <a href="#" class="btn btn-primary mt-2" id="i--button--check">Check Exam</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="row mt-3">
-                            <div class="card">
-                                <img src="src/images/Logo.png" alt="Admin" class="rounded-circle ms-1 mt-2 mb-2" width="150">
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-sm-9 col-md-9 col-lg-10 mt-3">
-                                            <h5 class="card-title text-primary text-uppercase fs-1 fw-bold">EXAM NAME</h5>
-                                            <p class="card-text text-primary fs-5">
-                                              Exam Information
-                                            </p>
-                                        </div>
-                                        <div class="col-sm-3 col-md-3 col-lg-2">
-                                            <a href="#" class="btn btn-primary" id="i--button--edit">Edit Exam</a>
-                                            <br>
-                                            <a href="#" class="btn btn-primary mt-2" id="i--button--check">Check Exam</a>
-                                        </div>
+                        <div class="card mt-3">
+                            <img src="../images/Logo.png" alt="Admin" class="rounded-circle ms-1 mt-2 mb-2" width="150">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-sm-9 col-md-9 col-lg-10 mt-3">
+                                        <h5 class="card-title text-primary text-uppercase fs-1 fw-bold">EXAM NAME</h5>
+                                        <p class="card-text text-primary fs-5">
+                                          Exam Information
+                                        </p>
+                                    </div>
+                                    <div class="col-sm-3 col-md-3 col-lg-2">
+                                        <a href="#" class="btn btn-primary" id="i--button--edit">Edit Exam</a>
+                                        <br>
+                                        <a href="#" class="btn btn-primary mt-2" id="i--button--check">Check Exam</a>
                                     </div>
                                 </div>
                             </div>
