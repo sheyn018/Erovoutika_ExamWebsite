@@ -39,7 +39,7 @@ if($_SESSION['admin_sid']==session_id())
             </div>
             <div id="i--account--admin">
                 <div class="header_img"> 
-                    <a href="admin_profile.php">
+                    <a href="AdminProfile.php">
                         <img src="../images/Display Picture Icon.png" alt="display picture"> 
                     </a>
                 </div>
