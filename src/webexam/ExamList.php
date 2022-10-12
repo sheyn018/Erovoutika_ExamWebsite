@@ -24,6 +24,7 @@
 </head>
 
 <body>
+    <!-------------------------- HEADER ---------------------------->   
     <header class="bg-white border-5 border-bottom border-primary">
         <nav class="navbar navbar-expand-lg navbar-light ms-4 me-4">
             <a class="navbar-brand mr-07" href="#"><img src="../images/Logo2.png" style="height: 60px;"></a>
@@ -43,7 +44,7 @@
                                 <i class="bi bi-person-fill"></i>
                               </button>
                               <ul class="dropdown-menu dropdown-menu-end">
-                                <li><a class="dropdown-item" href="UserProfile.php"><i class="bi bi-person-circle me-2"></i>Profile</a></li>
+                                <li><a class="dropdown-item" href="../webclient/UserProfile.php"><i class="bi bi-person-circle me-2"></i>Profile</a></li>
                                 <li>
                                   <?php echo
                                     '<a class="dropdown-item" href="Settings.php?clUrID='.$clUrID.'">'
@@ -85,7 +86,9 @@
                 </div>
             <!-- Modal -->
 
+            <!-------------------------- EXAM CONTAINER ---------------------------->
             <div class="exam_container">
+            <!-------------------------- EXAM CONTENT ---------------------------->
                 <div class="card bg-light border border-2 border-primary rounded mt-3 mb-3">
                     <div class="card-header bg-light">
                         <button type="button" class="btn btn-primary float-end" data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -117,160 +120,7 @@
                     </div>
                 </div>
 
-                <div class="card bg-light border border-2 border-primary rounded mt-3 mb-3">
-                    <div class="card-header bg-light">
-                        <button type="button" class="btn btn-primary float-end" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                          Take Exam
-                        </button>
-                    </div>
-
-                    <div class="card-body">
-                        <h4 class="card-title mb-4">Exam Title</h4>
-                        <div class="hstack gap-3">
-                            <div class="bg-light border-bottom border-top border-primary p-2">
-                                11/04/2022
-                            </div>
-
-                            <div class="vr"></div>
-
-                            <div class="bg-light border-bottom border-top border-primary p-2">
-                                50 Items
-                            </div>
-
-                            <div class="vr"></div>
-
-                            <div class="bg-light border-bottom border-top border-primary p-2">
-                                Multiple Choice
-                            </div>
-                        </div>
-
-                        <p class="card-text mt-4">Short Description of the Exam (Topic/Coverage)</p>
-                    </div>
-                </div>
-
-                <div class="card bg-light border border-2 border-primary rounded mt-3 mb-3">
-                    <div class="card-header bg-light">
-                        <button type="button" class="btn btn-primary float-end" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                          Take Exam
-                        </button>
-                    </div>
-
-                    <div class="card-body">
-                        <h4 class="card-title mb-4">Exam Title</h4>
-                        <div class="hstack gap-3">
-                            <div class="bg-light border-bottom border-top border-primary p-2">
-                                11/04/2022
-                            </div>
-
-                            <div class="vr"></div>
-
-                            <div class="bg-light border-bottom border-top border-primary p-2">
-                                50 Items
-                            </div>
-
-                            <div class="vr"></div>
-
-                            <div class="bg-light border-bottom border-top border-primary p-2">
-                                Multiple Choice
-                            </div>
-                        </div>
-
-                        <p class="card-text mt-4">Short Description of the Exam (Topic/Coverage)</p>
-                    </div>
-                </div>
-
-                <div class="card bg-light border border-2 border-primary rounded mt-3 mb-3">
-                    <div class="card-header bg-light">
-                        <button type="button" class="btn btn-primary float-end" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                          Take Exam
-                        </button>
-                    </div>
-
-                    <div class="card-body">
-                        <h4 class="card-title mb-4">Exam Title</h4>
-                        <div class="hstack gap-3">
-                            <div class="bg-light border-bottom border-top border-primary p-2">
-                                11/04/2022
-                            </div>
-
-                            <div class="vr"></div>
-
-                            <div class="bg-light border-bottom border-top border-primary p-2">
-                                50 Items
-                            </div>
-
-                            <div class="vr"></div>
-
-                            <div class="bg-light border-bottom border-top border-primary p-2">
-                                Multiple Choice
-                            </div>
-                        </div>
-
-                        <p class="card-text mt-4">Short Description of the Exam (Topic/Coverage)</p>
-                    </div>
-                </div>
-
-                <div class="card bg-light border border-2 border-primary rounded mt-3 mb-3">
-                    <div class="card-header bg-light">
-                        <button type="button" class="btn btn-primary float-end" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                          Take Exam
-                        </button>
-                    </div>
-
-                    <div class="card-body">
-                        <h4 class="card-title mb-4">Exam Title</h4>
-                        <div class="hstack gap-3">
-                            <div class="bg-light border-bottom border-top border-primary p-2">
-                                11/04/2022
-                            </div>
-
-                            <div class="vr"></div>
-
-                            <div class="bg-light border-bottom border-top border-primary p-2">
-                                50 Items
-                            </div>
-
-                            <div class="vr"></div>
-
-                            <div class="bg-light border-bottom border-top border-primary p-2">
-                                Multiple Choice
-                            </div>
-                        </div>
-
-                        <p class="card-text mt-4">Short Description of the Exam (Topic/Coverage)</p>
-                    </div>
-                </div>
-
-                <div class="card bg-light border border-2 border-primary rounded mt-3 mb-3">
-                    <div class="card-header bg-light">
-                        <button type="button" class="btn btn-primary float-end" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                          Take Exam
-                        </button>
-                    </div>
-
-                    <div class="card-body">
-                        <h4 class="card-title mb-4">Exam Title</h4>
-                        <div class="hstack gap-3">
-                            <div class="bg-light border-bottom border-top border-primary p-2">
-                                11/04/2022
-                            </div>
-
-                            <div class="vr"></div>
-
-                            <div class="bg-light border-bottom border-top border-primary p-2">
-                                50 Items
-                            </div>
-
-                            <div class="vr"></div>
-
-                            <div class="bg-light border-bottom border-top border-primary p-2">
-                                Multiple Choice
-                            </div>
-                        </div>
-
-                        <p class="card-text mt-4">Short Description of the Exam (Topic/Coverage)</p>
-                    </div>
-                </div>
+            <!-------------------------- EXAM CONTENT END ---------------------------->
             </div>
         </div>
     </div>

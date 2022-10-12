@@ -11,13 +11,13 @@ $updatedeletequery = " UPDATE tbusers SET
 if(mysqli_query($connectdb, $updatedeletequery)){
     echo "<script> 
     alert(' Account is deleted successfully!'); 
-    window.location = '../webclient/UserProfile.php'; 
+    window.location = '../../index.php'; 
     </script>";  
     
 } else{
     echo "<script>
     alert('Account deletion failed.');  
-    window.location = '../webadmin/adminpanel.php';
+    window.location = '../webclient/UserProfile.php';
     </script>";  
   
 }
