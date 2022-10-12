@@ -224,7 +224,7 @@ a.btn.ms-3.mb-3 {
         width: 6rem;
     }
     
-    .show{width: calc(var(--nav-width) + 156px)}
+    #nav-bar.show{width: calc(var(--nav-width) + 156px)}
     
     .body-pd{padding-left: calc(var(--nav-width) + 188px)}
 }
