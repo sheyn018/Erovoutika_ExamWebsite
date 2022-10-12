@@ -29,7 +29,7 @@ if(mysqli_query($connectdb, $updatequery)){
 } else{
     echo "<script>
     alert('Service update failed.');  
-    window.location = '../webadmin/adminpanel.php';
+    window.location = '../webclient/Settings.php';
     </script>";  
   
 }
