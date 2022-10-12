@@ -29,71 +29,60 @@ include '../includes/connectdb.php';
         <link rel="stylesheet" href="../css/admin_examlist_style.css">
     </head>
 
-    <header class="header" id="header">
-            <div class="header_toggle">
-                <i class='bx bx-menu' id="header-toggle"></i>
+    <header class="header shadow" id="header">
+            <div class="header_toggle"> 
+                <i class='bx bx-menu' id="header-toggle"></i> 
             </div>
             <div id="i--account--admin">
-                <div class="header_img">
-                    <img src="../images/Display Picture Icon.png" alt="display picture">
+                <div class="header_img"> 
+                    <a href="AdminProfile.php">
+                        <img src="../images/Display Picture Icon.png" alt="display picture"> 
+                    </a>
                 </div>
                 <div>
-                    <button type="button" class="btn btn-outline-light ms-4 mt-2">
-                        <a href="../includes/logout.php" id="i--button--logout">Logout</a>
+                    <button type="button" class="btn ms-4 mt-2">
+                        <a href="../includes/logout.php" class="fw-bold" id="i--button--logout">Logout</a>
                     </button>
                 </div>
             </div>
-    </header>
+        </header>
 
     <body id="body-pd">
 
         <div class="l-navbar" id="nav-bar">
             <nav class="nav">
-                <div>
-                    <a href="#" class="nav_logo">
+                <div> 
+                    <!-- Admin Home with Logo -->
+                    <a href="AdminHome.php" class="nav_logo"> 
                         <i>
-                            <img src="../images/Logo.png" alt="Erovoutika Logo" id="i--logo--erovoutika">
-                        </i>
-                        <span class="nav_logo-name fs-5">Erouvotika</span>
+                            <img src="../images/Small Logo.png" alt="Erovoutika Logo" id="i--logo--erovoutika">
+                        </i> 
+                        <span class="nav_logo-name fs-5 fw-bold">Erouvotika</span> 
                     </a>
-                    <div class="nav_list">
-                        <a href="AdminHome.php" class="nav_link">
-                            <i class='bx bx-grid-alt nav_icon'></i>
-                            <span class="nav_name">Dashboard</span>
-                        </a>
+                    <div class="nav_list"> 
+                        <a href="AdminHome.php" class="nav_link active"> 
+                            <i class='bx bx-grid-alt nav_icon'></i> 
+                            <span class="nav_name fw-bold">Dashboard</span> 
+                        </a> 
                         <a href="AdminProfile.php" class="nav_link">
-                            <i class='bx bx-user nav_icon'></i>
-                            <span class="nav_name">Edit Profile</span>
+                            <i class='bx bx-user nav_icon'></i> 
+                            <span class="nav_name">Edit Profile</span> 
                         </a>
-                        <a href="#" class="nav_link active">
-                            <i class='bx bx-message-square-detail nav_icon'></i>
-                            <span class="nav_name">Exam List</span>
-                        </a>
-                        <a href="#" class="nav_link">
-                            <i class='bx bx-bookmark nav_icon'></i>
-                            <span class="nav_name">Bookmark</span>
-                        </a>
-                        <a href="#" class="nav_link">
-                            <i class='bx bx-folder nav_icon'></i>
-                            <span class="nav_name">Files</span>
-                        </a>
-                        <a href="#" class="nav_link">
-                            <i class='bx bx-bar-chart-alt-2 nav_icon'></i>
-                            <span class="nav_name">Stats</span>
+                        <a href="admin_usertable.php" class="nav_link"> 
+                            <i class='bx bx-table nav_icon'></i>
+                            <span class="nav_name">User Table</span> 
+                        </a> 
+                        <a href="AdminExamList.php" class="nav_link"> 
+                            <i class='bx bx-message-square-detail nav_icon'></i> 
+                            <span class="nav_name">Exam List</span> 
                         </a>
                     </div>
-                </div>
-                <button type="button" class="btn btn-primary ms-3 mb-3">
-                    <i class="bi bi-pencil-square"></i>
-                    <!--
-                        Temporarily enclosed this in <a> element.
-                            Button is usually used in form, modal.
-                            Not to redirect a page hehehe thank you~
-                    -->
-                    <a href="adminsignup_template.php">
-                    <span class="nav_name" id="i--label--signout">Sign Up</span>
+                </div> 
+                    <a href="adminsignup_template.php"  class="btn btn-primary ms-3 mb-3">
+                        <i class="bi bi-pencil-square"></i> 
+                        <span class="nav_name" id="i--label--signout">Sign Up</span>
                     </a>
-                </button>
+                </div> 
             </nav>
         </div>
 
@@ -115,7 +104,7 @@ include '../includes/connectdb.php';
                     <div class="col-12">
                         <div class="row">
                             <div class="card">
-                                <img src="../images/Logo.png" alt="Admin" class="rounded-circle ms-1 mt-2 mb-2" width="150">
+                                <img src="../images/Small Logo.png" alt="Admin" class="rounded-circle ms-1 mt-2 mb-2" width="150">
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col-sm-9 col-md-9 col-lg-10 mt-3">
@@ -136,7 +125,7 @@ include '../includes/connectdb.php';
 
                         <div class="row mt-3">
                             <div class="card">
-                                <img src="src/images/Logo.png" alt="Admin" class="rounded-circle ms-1 mt-2 mb-2" width="150">
+                                <img src="../images/Small Logo.png" alt="Admin" class="rounded-circle ms-1 mt-2 mb-2" width="150">
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col-sm-9 col-md-9 col-lg-10 mt-3">
@@ -157,7 +146,7 @@ include '../includes/connectdb.php';
 
                         <div class="row mt-3">
                             <div class="card">
-                                <img src="src/images/Logo.png" alt="Admin" class="rounded-circle ms-1 mt-2 mb-2" width="150">
+                                <img src="../images/Small Logo.png" alt="Admin" class="rounded-circle ms-1 mt-2 mb-2" width="150">
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col-sm-9 col-md-9 col-lg-10 mt-3">
