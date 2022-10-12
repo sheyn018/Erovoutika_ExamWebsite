@@ -203,6 +203,9 @@ if($_SESSION['client_sid']==session_id())
                   }
 
                 ?>
+                </div>
+            </div>
+    </div>
 
     </body>
 </html>
