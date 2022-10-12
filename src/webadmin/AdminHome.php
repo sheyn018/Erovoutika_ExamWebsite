@@ -39,7 +39,9 @@ if($_SESSION['admin_sid']==session_id())
             </div>
             <div id="i--account--admin">
                 <div class="header_img"> 
-                    <img src="../images/Display Picture Icon.png" alt="display picture"> 
+                    <a href="admin_profile.php">
+                        <img src="../images/Display Picture Icon.png" alt="display picture"> 
+                    </a>
                 </div>
                 <div>
                     <button type="button" class="btn ms-4 mt-2">
