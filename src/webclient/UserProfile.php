@@ -174,10 +174,19 @@ if($_SESSION['client_sid']==session_id())
                     -->
 
                 <div class="exam_container">
-                    <div class="exam_card h-100">
-                        <div class="card-body border border-2 border-primary rounded">
-                          <h2 class="d-flex align-items-center border-5 border-bottom border-primary mb-4">EXAM TITLE</h2>
+                <?php
 
+                  $sql = "SELECT * FROM tbexam";
+                  $result = $connectdb->query($sql);
+
+                  if ($result->num_rows > 0) {
+                    while($row = $result->fetch_assoc()) {
+                      echo '<div class="exam_card h-100">';
+                        echo '<div class="card-body border border-2 border-primary rounded">';
+                          echo '<h2 class="d-flex align-items-center border-5 border-bottom border-primary mb-4">'
+                          .$row["clExTitle"].'</h2>';
+
+                          echo '
                           <h6>Date Taken: </h6>
                             <p>September 22, 2022</p>
 
@@ -186,98 +195,18 @@ if($_SESSION['client_sid']==session_id())
 
                           <h6>Acccuracy: 80%</h6>
                             <div class="progress mb-3" style="height: 5px">
-                                <div class="progress-bar bg-primary" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-                    </div>
+                                <div class="progress-bar bg-primary" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>';
+                          echo '</div>';
+                        echo '</div>';
+                      echo '</div>';
+                    }
+                  }
 
-                    <div class="exam_card h-100">
-                        <div class="card-body border border-2 border-primary rounded">
-                          <h2 class="d-flex align-items-center border-5 border-bottom border-primary mb-4">EXAM TITLE</h2>
-
-                          <h6>Date Taken: </h6>
-                            <p>September 22, 2022</p>
-
-                          <h6>Score: </h6>
-                            <p>50/50</p>
-
-                          <h6>Acccuracy: 80%</h6>
-                            <div class="progress mb-3" style="height: 5px">
-                                <div class="progress-bar bg-primary" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="exam_card h-100">
-                        <div class="card-body border border-2 border-primary rounded">
-                          <h2 class="d-flex align-items-center border-5 border-bottom border-primary mb-4">EXAM TITLE</h2>
-
-                          <h6>Date Taken: </h6>
-                            <p>September 22, 2022</p>
-
-                          <h6>Score: </h6>
-                            <p>50/50</p>
-
-                          <h6>Acccuracy: 80%</h6>
-                            <div class="progress mb-3" style="height: 5px">
-                                <div class="progress-bar bg-primary" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="exam_card h-100">
-                        <div class="card-body border border-2 border-primary rounded">
-                          <h2 class="d-flex align-items-center border-5 border-bottom border-primary mb-4">EXAM TITLE</h2>
-
-                          <h6>Date Taken: </h6>
-                            <p>September 22, 2022</p>
-
-                          <h6>Score: </h6>
-                            <p>50/50</p>
-
-                          <h6>Acccuracy: 80%</h6>
-                            <div class="progress mb-3" style="height: 5px">
-                                <div class="progress-bar bg-primary" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="exam_card h-100">
-                        <div class="card-body border border-2 border-primary rounded">
-                          <h2 class="d-flex align-items-center border-5 border-bottom border-primary mb-4">EXAM TITLE</h2>
-
-                          <h6>Date Taken: </h6>
-                            <p>September 22, 2022</p>
-
-                          <h6>Score: </h6>
-                            <p>50/50</p>
-
-                          <h6>Acccuracy: 80%</h6>
-                            <div class="progress mb-3" style="height: 5px">
-                                <div class="progress-bar bg-primary" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="exam_card h-100">
-                        <div class="card-body border border-2 border-primary rounded">
-                          <h2 class="d-flex align-items-center border-5 border-bottom border-primary mb-4">EXAM TITLE</h2>
-
-                          <h6>Date Taken: </h6>
-                            <p>September 22, 2022</p>
-
-                          <h6>Score: </h6>
-                            <p>50/50</p>
-
-                          <h6>Acccuracy: 80%</h6>
-                            <div class="progress mb-3" style="height: 5px">
-                                <div class="progress-bar bg-primary" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-                    </div>
+                ?>
                 </div>
             </div>
-        </div>
+    </div>
+
     </body>
 </html>
 <?php
