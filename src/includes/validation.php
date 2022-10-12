@@ -20,7 +20,7 @@ if($success == true){
     $_SESSION['clUrUsername'] = $clUrUsername;
 
 
-	header("location: ../webadmin/admin_template.php");
+	header("location: ../webadmin/AdminHome.php");
 }else{
         $result = mysqli_query($connectdb, "SELECT * FROM tbusers WHERE clUrUsername='$username' AND clUrPassword='$password' AND clUrLevel='1';");
         while($row = mysqli_fetch_array($result))

@@ -3,6 +3,10 @@
     margin-right: 3%;
 }
 
+.mr-07{
+    margin-right: 7%;
+}
+
 .mr-1{
     margin-right: 10%;
 }
@@ -17,20 +21,16 @@
 
 /*Icons*/
 .bi-person-fill{
-    font-size: 40px;
+    font-size: 35px;
 }
 
 body{
-    margin-top:20px;
     color: #1a202c;
     text-align: left;
-    background-color: #e2e8f0;
 }
+
 .main-body {
     padding: 15px;
-}
-.card {
-    box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.06);
 }
 
 .card {
@@ -43,6 +43,7 @@ body{
     background-clip: border-box;
     border: 0 solid rgba(0,0,0,.125);
     border-radius: .25rem;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.06);
 }
 
 .card-body {
@@ -72,4 +73,40 @@ body{
 }
 .shadow-none {
     box-shadow: none!important;
+}
+
+/* Non-BootStrap*/
+.exam_container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 1em 0;
+    text-align: left;
+}
+
+.exam_card{
+    width: 30%;
+    display: flex;
+    padding: .6em .6em .6em .6em;
+    margin-bottom: 1em;
+    border-radius: .5rem;
+    border-width: .2rem;
+    border: 0;
+    box-shadow: 0 2px 6px 0 hsla(0, 0%, 0%, 0.2);
+}
+
+@media (max-width: 820px) {
+  .exam_container {
+    min-width: auto;
+    display: block;
+  }
+  .exam_card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .exam_card {
+    box-shadow: none;
+  }
 }

@@ -95,11 +95,13 @@ include '../includes/connectdb.php';
                         EXAM LIST
                     </div>
                 </div>
+
                 <!-- Blue Line -->
                 <div class="row">
                     <div class="col-3" id="i--line--blue"></div>
                 </div>
-                <!-- Edit Banners -->
+
+                <!-- Cards -->
                 <div class="row my-2 gy-3">
                     <div class="col-12">
                         <div class="row">
@@ -122,7 +124,6 @@ include '../includes/connectdb.php';
                                 </div>
                             </div>
                         </div>
-
                         <div class="row mt-3">
                             <div class="card">
                                 <img src="../images/Small Logo.png" alt="Admin" class="rounded-circle ms-1 mt-2 mb-2" width="150">
@@ -143,7 +144,6 @@ include '../includes/connectdb.php';
                                 </div>
                             </div>
                         </div>
-
                         <div class="row mt-3">
                             <div class="card">
                                 <img src="../images/Small Logo.png" alt="Admin" class="rounded-circle ms-1 mt-2 mb-2" width="150">
