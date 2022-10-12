@@ -30,25 +30,26 @@ include '../includes/connectdb.php';
     </head>
 
     <header class="header shadow" id="header">
-            <div class="header_toggle"> 
-                <i class='bx bx-menu' id="header-toggle"></i> 
+        <div class="header_toggle"> 
+            <i class='bx bx-menu' id="header-toggle"></i> 
+        </div>
+        <div id="i--account--admin">
+            <div class="header_img"> 
+                <a href="AdminProfile.php">
+                    <img src="../images/Display Picture Icon.png" alt="display picture"> 
+                </a>
             </div>
-            <div id="i--account--admin">
-                <div class="header_img"> 
-                    <a href="AdminProfile.php">
-                        <img src="../images/Display Picture Icon.png" alt="display picture"> 
-                    </a>
-                </div>
-                <div>
-                    <button type="button" class="btn ms-4 mt-2">
-                        <a href="../includes/logout.php" class="fw-bold" id="i--button--logout">Logout</a>
-                    </button>
-                </div>
+            <div>
+                <button type="button" class="btn ms-4 mt-2">
+                    <a href="../includes/logout.php" class="fw-bold" id="i--button--logout">Logout</a>
+                </button>
             </div>
-        </header>
+        </div>
+    </header>
 
     <body id="body-pd">
 
+        <!-- SIDE BAR -->
         <div class="l-navbar" id="nav-bar">
             <nav class="nav">
                 <div> 
@@ -101,69 +102,39 @@ include '../includes/connectdb.php';
                     <div class="col-3" id="i--line--blue"></div>
                 </div>
 
-                <!-- Cards -->
+                <!-- Cards Container -->
                 <div class="row my-2 gy-3">
                     <div class="col-12">
-                        <div class="row">
-                            <div class="card">
-                                <img src="../images/Small Logo.png" alt="Admin" class="rounded-circle ms-1 mt-2 mb-2" width="150">
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-sm-9 col-md-9 col-lg-10 mt-3">
-                                            <h5 class="card-title text-primary text-uppercase fs-1 fw-bold">EXAM NAME</h5>
-                                            <p class="card-text text-primary fs-5">
-                                              Exam Information
-                                            </p>
-                                        </div>
-                                        <div class="col-sm-3 col-md-3 col-lg-2">
-                                            <a href="#" class="btn btn-primary" id="i--button--edit">Edit Exam</a>
-                                            <br>
-                                            <a href="#" class="btn btn-primary mt-2" id="i--button--check">Check Exam</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="card">
-                                <img src="../images/Small Logo.png" alt="Admin" class="rounded-circle ms-1 mt-2 mb-2" width="150">
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-sm-9 col-md-9 col-lg-10 mt-3">
-                                            <h5 class="card-title text-primary text-uppercase fs-1 fw-bold">EXAM NAME</h5>
-                                            <p class="card-text text-primary fs-5">
-                                              Exam Information
-                                            </p>
-                                        </div>
-                                        <div class="col-sm-3 col-md-3 col-lg-2">
-                                            <a href="#" class="btn btn-primary" id="i--button--edit">Edit Exam</a>
-                                            <br>
-                                            <a href="#" class="btn btn-primary mt-2" id="i--button--check">Check Exam</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="card">
-                                <img src="../images/Small Logo.png" alt="Admin" class="rounded-circle ms-1 mt-2 mb-2" width="150">
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-sm-9 col-md-9 col-lg-10 mt-3">
-                                            <h5 class="card-title text-primary text-uppercase fs-1 fw-bold">EXAM NAME</h5>
-                                            <p class="card-text text-primary fs-5">
-                                              Exam Information
-                                            </p>
-                                        </div>
-                                        <div class="col-sm-3 col-md-3 col-lg-2">
-                                            <a href="#" class="btn btn-primary" id="i--button--edit">Edit Exam</a>
-                                            <br>
-                                            <a href="#" class="btn btn-primary mt-2" id="i--button--check">Check Exam</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <!-- CARDS -->
+                        <?php
+                        $sql = "SELECT * FROM tbexam";
+                        $result = $connectdb->query($sql);
+
+                        if ($result->num_rows > 0) {
+                            while($row = $result->fetch_assoc()) {
+                                echo '<div class="row mt-3">';
+                                    echo '<div class="card">';
+                                        echo '<img src="../images/Small Logo.png" alt="Admin" class="rounded-circle ms-1 mt-2 mb-2" width="150">';
+                                        echo '<div class="card-body">';
+                                            echo '<div class="row">';
+                                                echo '<div class="col-sm-9 col-md-9 col-lg-10 mt-3">
+                                                        <h5 class="card-title text-primary text-uppercase fs-1 fw-bold">'.$row["clExTitle"].'</h5>
+                                                            <p class="card-text text-primary fs-5">
+                                                            '.$row["clExDescription"].'
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-sm-3 col-md-3 col-lg-2">
+                                                            <a href="#" class="btn btn-primary" id="i--button--edit">Edit Exam</a>
+                                                                <br>
+                                                            <a href="#" class="btn btn-primary mt-2" id="i--button--check">Check Exam</a>
+                                                    </div>';
+                                            echo '</div>';       
+                                        echo '</div>';
+                                    echo '</div>';
+                                echo '</div>';
+                            }
+                        }
+                    ?>
                     </div>
                 </div>
             </div>
