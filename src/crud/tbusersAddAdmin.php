@@ -17,13 +17,13 @@ $usersquery = "INSERT INTO tbusers ( clUrFirstname, clUrLastname, clUrUsername, 
 if(mysqli_query($connectdb, $usersquery)){
   echo "<script> 
   alert('Account is successfully added!'); 
-  window.location = '../login.php'; 
+  window.location = '../admin_usertable.php'; 
   </script>";  
   
 } else{
   echo "<script>
   alert('Failed to add.');  
-  window.location = '../signup.php';
+  window.location = '../admin_usertable.php';
   </script>"; 
   
 }
