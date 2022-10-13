@@ -61,9 +61,9 @@ include '../includes/connectdb.php';
                         <span class="nav_logo-name fs-5 fw-bold">Erouvotika</span> 
                     </a>
                     <div class="nav_list"> 
-                        <a href="AdminHome.php" class="nav_link active"> 
+                        <a href="AdminHome.php" class="nav_link"> 
                             <i class='bx bx-grid-alt nav_icon'></i> 
-                            <span class="nav_name fw-bold">Dashboard</span> 
+                            <span class="nav_name">Dashboard</span> 
                         </a> 
                         <a href="AdminProfile.php" class="nav_link">
                             <i class='bx bx-user nav_icon'></i> 
@@ -73,9 +73,9 @@ include '../includes/connectdb.php';
                             <i class='bx bx-table nav_icon'></i>
                             <span class="nav_name">User Table</span> 
                         </a> 
-                        <a href="AdminExamList.php" class="nav_link"> 
+                        <a href="AdminExamList.php" class="nav_link active"> 
                             <i class='bx bx-message-square-detail nav_icon'></i> 
-                            <span class="nav_name">Exam List</span> 
+                            <span class="nav_name fw-bold">Exam List</span> 
                         </a>
                     </div>
                 </div> 
