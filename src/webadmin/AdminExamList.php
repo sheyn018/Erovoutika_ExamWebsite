@@ -67,25 +67,26 @@
     </head>
 
     <header class="header shadow" id="header">
-            <div class="header_toggle"> 
-                <i class='bx bx-menu' id="header-toggle"></i> 
+        <div class="header_toggle"> 
+            <i class='bx bx-menu' id="header-toggle"></i> 
+        </div>
+        <div id="i--account--admin">
+            <div class="header_img"> 
+                <a href="AdminProfile.php">
+                    <img src="../images/Display Picture Icon.png" alt="display picture"> 
+                </a>
             </div>
-            <div id="i--account--admin">
-                <div class="header_img"> 
-                    <a href="AdminProfile.php">
-                        <img src="../images/Display Picture Icon.png" alt="display picture"> 
-                    </a>
-                </div>
-                <div>
-                    <button type="button" class="btn ms-4 mt-2">
-                        <a href="../includes/logout.php" class="fw-bold" id="i--button--logout">Logout</a>
-                    </button>
-                </div>
+            <div>
+                <button type="button" class="btn ms-4 mt-2">
+                    <a href="../includes/logout.php" class="fw-bold" id="i--button--logout">Logout</a>
+                </button>
             </div>
-        </header>
+        </div>
+    </header>
 
     <body id="body-pd">
 
+        <!-- SIDE BAR -->
         <div class="l-navbar" id="nav-bar">
             <nav class="nav">
                 <div> 
@@ -99,7 +100,7 @@
                     <div class="nav_list"> 
                         <a href="AdminHome.php" class="nav_link"> 
                             <i class='bx bx-grid-alt nav_icon'></i> 
-                            <span class="nav_name fw-bold">Dashboard</span> 
+                            <span class="nav_name">Dashboard</span> 
                         </a> 
                         <a href="AdminProfile.php" class="nav_link">
                             <i class='bx bx-user nav_icon'></i> 
@@ -111,7 +112,7 @@
                         </a> 
                         <a href="AdminExamList.php" class="nav_link active">
                             <i class='bx bx-message-square-detail nav_icon'></i> 
-                            <span class="nav_name">Exam List</span> 
+                            <span class="nav_name fw-bold">Exam List</span> 
                         </a>
                     </div>
                 </div> 
@@ -138,7 +139,7 @@
                     <div class="col-3" id="i--line--blue"></div>
                 </div>
 
-                <!-- Cards -->
+                <!-- Cards Container -->
                 <div class="row my-2 gy-3">
                     <div id="i-div--examlist-empty"></div>
                     <div class="col-12" id="i-div--examlist-display"></div>

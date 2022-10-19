@@ -111,106 +111,34 @@ include '../includes/connectdb.php';
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td>John Doe</td>
-                                    <td>JohnDoe</td>
-                                    <td>********</td>
-                                    <td>09123456789</td>
-                                    <td>johndoe@gmail.com</td>
-                                    <td>1234 Street, Barangay, City, Province</td>
-                                    <td>0</td>
-                                    <td>2021-01-01</td>
-                                    <td>2021-01-01</td>
-                                    <td>
-                                        <button type="button" class="btn btn-outline-primary">
-                                            <i class="bi bi-pencil-square"></i>
-                                        </button>
-                                        <button type="button" class="btn btn-outline-danger">
-                                            <i class="bi bi-trash"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">2</th>
-                                    <td>John Doe</td>
-                                    <td>JohnDoe</td>
-                                    <td>********</td>
-                                    <td>09123456789</td>
-                                    <td>johndoe@gmail.com</td>
-                                    <td>1234 Street, Barangay, City, Province</td>
-                                    <td>0</td>
-                                    <td>2021-01-01</td>
-                                    <td>2021-01-01</td>
-                                    <td>
-                                        <button type="button" class="btn btn-outline-primary">
-                                            <i class="bi bi-pencil-square"></i>
-                                        </button>
-                                        <button type="button" class="btn btn-outline-danger">
-                                            <i class="bi bi-trash"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">3</th>
-                                    <td>John Doe</td>
-                                    <td>JohnDoe</td>
-                                    <td>********</td>
-                                    <td>09123456789</td>
-                                    <td>johndoe@gmail.com</td>
-                                    <td>1234 Street, Barangay, City, Province</td>
-                                    <td>0</td>
-                                    <td>2021-01-01</td>
-                                    <td>2021-01-01</td>
-                                    <td>
-                                        <button type="button" class="btn btn-outline-primary">
-                                            <i class="bi bi-pencil-square"></i>
-                                        </button>
-                                        <button type="button" class="btn btn-outline-danger">
-                                            <i class="bi bi-trash"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">4</th>
-                                    <td>John Doe</td>
-                                    <td>JohnDoe</td>
-                                    <td>********</td>
-                                    <td>09123456789</td>
-                                    <td>johndoe@gmail.com</td>
-                                    <td>1234 Street, Barangay, City, Province</td>
-                                    <td>0</td>
-                                    <td>2021-01-01</td>
-                                    <td>2021-01-01</td>
-                                    <td>
-                                        <button type="button" class="btn btn-outline-primary">
-                                            <i class="bi bi-pencil-square"></i>
-                                        </button>
-                                        <button type="button" class="btn btn-outline-danger">
-                                            <i class="bi bi-trash"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">5</th>
-                                    <td>John Doe</td>
-                                    <td>JohnDoe</td>
-                                    <td>********</td>
-                                    <td>09123456789</td>
-                                    <td>johndoe@gmail.com</td>
-                                    <td>1234 Street, Barangay, City, Province</td>
-                                    <td>0</td>
-                                    <td>2021-01-01</td>
-                                    <td>2021-01-01</td>
-                                    <td>
-                                        <button type="button" class="btn btn-outline-primary">
-                                            <i class="bi bi-pencil-square"></i>
-                                        </button>
-                                        <button type="button" class="btn btn-outline-danger">
-                                            <i class="bi bi-trash"></i>
-                                        </button>
-                                    </td>
-                                </tr>
+                                <?php
+                                $sql = "SELECT * FROM tbusers";
+                                $result = $connectdb->query($sql);
+                                        
+                                if ($result->num_rows > 0) {
+                                    // output data of each row
+                                    while($row = $result->fetch_assoc()) {
+                                        echo'<tr>';
+                                            echo'<th scope="row">'.$row["clUrID"].'</th>';
+                                            echo'<td>'.$row["clUrFirstname"].' '.$row["clUrLastname"].'</td>';
+                                            echo'<td>'.$row["clUrUsername"].'</td>';
+                                            echo'<td>'.$row["clUrPassword"].'</td>';
+                                            echo'<td>'.$row["clUrcontact_num"].'</td>';
+                                            echo'<td>'.$row["clUremail"].'</td>';
+                                            echo'<td>'.$row["clUraddress"].'</td>';
+                                            echo'<td></td>';
+                                            echo'<td>'.$row["clUrdate_added"].'</td>';
+                                            echo'<td></td>';
+                                            echo'<td>';
+                                                echo '<a class="btn btn-outline-primary" href="">
+                                                    <i class="bi bi-pencil-square"></i> </a>';
+                                                echo '<a class="btn btn-outline-danger" href="">
+                                                    <i class="bi bi-trash"></a>';
+                                            echo'</td>';
+                                    }            
+                                        echo '</tr>';
+                                }      
+                                ?>
                             </tbody>
                         </table>
                     </div>

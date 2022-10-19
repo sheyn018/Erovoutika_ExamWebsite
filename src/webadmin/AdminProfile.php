@@ -90,139 +90,156 @@ include '../includes/connectdb.php';
                 <div class="col display-6">
                     EDIT PROFILE
                 </div>
-                <div class="row mt-5">
-                    <!-- Profile Section -->
-                    <div class="col-6">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col fs-2">
-                                    PROFILE
+                <form action="">                
+                    <div class="row mt-5">
+                        <!-- Profile Section -->
+                        <div class="col-6">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col fs-2">
+                                        PROFILE
+                                    </div>
                                 </div>
-                            </div>
-                            <!-- Blue Line -->
-                            <div class="row">
-                                <div class="col-4 ms-2" id="i--line--profile"></div>
-                            </div>
-                            <!-- Profile Banners -->
-                            <div class="row my-2 gy-3">
-                                <div class="col-11">
-                                    <div class="card" id="i--card--edit">
-                                        <div class="card-body">
-                                            <div class="container">
-                                                <div class="row fs-4 fw-bold">
-                                                    NAME:
+                                <!-- Blue Line -->
+                                <div class="row">
+                                    <div class="col-4 ms-2" id="i--line--profile"></div>
+                                </div>
+                                <!-- Profile Banners -->
+                                <div class="row my-2 gy-3">
+                                    <div class="col-11">
+                                        <div class="card" id="i--card--edit">
+                                            <div class="card-body">
+                                                <div class="container">
+                                                    <div class="row fs-4 fw-bold">
+                                                        NAME:
+                                                    </div>
+                                                    <div class="row" id="i--line--card"></div>
+                                                    <div class="row mt-2 fs-5">
+                                                        <input type="name" class="form-control" id="adminName" aria-describedby="nameAdmin" placeholder="Sample Name">
+                                                    </div>
                                                 </div>
-                                                <div class="row" id="i--line--card"></div>
-                                                <div class="row mt-3 fs-5">
-                                                    Sample Name
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Username -->
+                                    <div class="col-11">
+                                        <div class="card" id="i--card--edit">
+                                            <div class="card-body">
+                                                <div class="container">
+                                                    <div class="row fs-4 fw-bold">
+                                                        USERNAME:
+                                                    </div>
+                                                    <div class="row" id="i--line--card"></div>
+                                                    <div class="row mt-3 fs-5">
+                                                    <input type="name" class="form-control" id="adminUN" aria-describedby="usernameAdmin" placeholder="sampleusername">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Photo -->
+                                    <div class="col-11">
+                                        <div class="card" id="i--card--edit">
+                                            <div class="card-body">
+                                                <div class="container">
+                                                    <div class="row fs-4 fw-bold">
+                                                        PHOTO:
+                                                    </div>
+                                                    <div class="row" id="i--line--card"></div>
+                                                    <div class="row mt-3 fs-5">
+                                                        <input type="file" class="form-control" id="customFile">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Cancel and Save Button -->
+                                    <div class="col-11">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-5">
+                                                    <a href="#">
+                                                        <button type="button" class="btn btn-lg btn-danger" id="i--button--cancel">CANCEL</button>
+                                                    </a>
+                                                </div>
+                                                <div class="col-6">
+                                                    <button type="submit" formaction="#" class="btn btn-lg btn-success" id="i--button--save">SAVE</button>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <!-- Username -->
-                                <div class="col-11">
-                                    <div class="card" id="i--card--edit">
-                                        <div class="card-body">
-                                            <div class="container">
-                                                <div class="row fs-4 fw-bold">
-                                                    USERNAME:
-                                                </div>
-                                                <div class="row" id="i--line--card"></div>
-                                                <div class="row mt-3 fs-5">
-                                                    sampleusername
-                                                </div>
-                                            </div>
-                                        </div>
+                            </div>
+                            
+                        </div>
+                        <!-- Account Section -->
+                        <div class="col-6">
+                            <div class="container">
+                                <!-- Header -->
+                                <div class="row">
+                                    <div class="col-11 fs-2">
+                                        ACCOUNT
                                     </div>
                                 </div>
-                                <!-- Photo -->
-                                <div class="col-11">
-                                    <div class="card" id="i--card--edit">
-                                        <div class="card-body">
-                                            <div class="container">
-                                                <div class="row fs-4 fw-bold">
-                                                    PHOTO:
-                                                </div>
-                                                <div class="row" id="i--line--card"></div>
-                                                <div class="row mt-3 fs-5">
-                                                    Upload Photo
+                                <!-- Blue Line -->
+                                <div class="row">
+                                    <div class="col-4 ms-2" id="i--line--account"></div>
+                                </div>
+                                <!-- Account Banners -->
+                                <div class="row mt-1 gy-4">
+                                    <!-- Update Password -->
+                                    <div class="col-11">
+                                        <button type="button" class="btn" id="i--button--up" data-bs-toggle="modal" data-bs-target="#passwordModal">
+                                            <div class="card" id="i--card--edit">
+                                                <div class="card-body">
+                                                    <div class="container">
+                                                        <div class="row fs-4 fw-bold">
+                                                            UPDATE PASSWORD
+                                                        </div>
+                                                        <div class="row" id="i--line--card"></div>
+                                                        <div class="row mt-3 fs-5"></div>
+                                                    </div> 
                                                 </div>
                                             </div>
-                                        </div>
+                                        </button> 
+                                    </div>
+                                    <!-- Delete Account -->
+                                    <div class="col-11">
+                                        <button type="button" class="btn" id="i--button--up" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                                            <div class="card" id="i--card--edit">
+                                                <div class="card-body">
+                                                    <div class="container">
+                                                        <div class="row fs-4 fw-bold">
+                                                            DELETE ACCOUNT
+                                                        </div>
+                                                        <div class="row" id="i--line--card"></div>
+                                                        <div class="row mt-3 fs-5"></div>
+                                                    </div> 
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                    <!-- Log Out -->
+                                    <div class="col-11">
+                                        <button type="button" class="btn" id="i--button--up" data-bs-toggle="modal" data-bs-target="#logoutModal">
+                                            <div class="card" id="i--card--edit">
+                                                <div class="card-body">
+                                                    <div class="container">
+                                                        <div class="row fs-4 fw-bold">
+                                                            LOG OUT
+                                                        </div>
+                                                        <div class="row" id="i--line--card"></div>
+                                                        <div class="row mt-3 fs-5"></div>
+                                                    </div> 
+                                                </div>
+                                            </div>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        
                     </div>
-                    <!-- Account Section -->
-                    <div class="col-6">
-                        <div class="container">
-                            <!-- Header -->
-                            <div class="row">
-                                <div class="col-11 fs-2">
-                                    ACCOUNT
-                                </div>
-                            </div>
-                            <!-- Blue Line -->
-                            <div class="row">
-                                <div class="col-4 ms-2" id="i--line--account"></div>
-                            </div>
-                            <!-- Account Banners -->
-                            <div class="row mt-1 gy-4">
-                                <!-- Update Password -->
-                                <div class="col-11">
-                                    <button type="button" class="btn" id="i--button--up" data-bs-toggle="modal" data-bs-target="#passwordModal">
-                                        <div class="card" id="i--card--edit">
-                                            <div class="card-body">
-                                                <div class="container">
-                                                    <div class="row fs-4 fw-bold">
-                                                        UPDATE PASSWORD
-                                                    </div>
-                                                    <div class="row" id="i--line--card"></div>
-                                                    <div class="row mt-3 fs-5"></div>
-                                                </div> 
-                                            </div>
-                                        </div>
-                                    </button> 
-                                </div>
-                                <!-- Delete Account -->
-                                <div class="col-11">
-                                    <button type="button" class="btn" id="i--button--up" data-bs-toggle="modal" data-bs-target="#deleteModal">
-                                        <div class="card" id="i--card--edit">
-                                            <div class="card-body">
-                                                <div class="container">
-                                                    <div class="row fs-4 fw-bold">
-                                                        DELETE ACCOUNT
-                                                    </div>
-                                                    <div class="row" id="i--line--card"></div>
-                                                    <div class="row mt-3 fs-5"></div>
-                                                </div> 
-                                            </div>
-                                        </div>
-                                    </button>
-                                </div>
-                                <!-- Log Out -->
-                                <div class="col-11">
-                                    <button type="button" class="btn" id="i--button--up" data-bs-toggle="modal" data-bs-target="#logoutModal">
-                                        <div class="card" id="i--card--edit">
-                                            <div class="card-body">
-                                                <div class="container">
-                                                    <div class="row fs-4 fw-bold">
-                                                        LOG OUT
-                                                    </div>
-                                                    <div class="row" id="i--line--card"></div>
-                                                    <div class="row mt-3 fs-5"></div>
-                                                </div> 
-                                            </div>
-                                        </div>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                </form>
             </div>
 
             <!-- Modal -->
@@ -235,13 +252,16 @@ include '../includes/connectdb.php';
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <p>Input Fields</p>
+                            <label for="Password" class="form-label fw-bold">Enter the new Password:</label>
+                            <input type="password" class="form-control" id="newPassword" aria-describedby="passwordNew">
+                            <label for="Password" class="form-label mt-2 fw-bold">Re-enter the new Password:</label>
+                            <input type="password" class="form-control" id="newPassword" aria-describedby="passwordNew">
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
                                 Cancel
                             </button>
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                            <button type="button" class="btn btn-success" data-bs-dismiss="modal">
                                 Save
                             </button>
                         </div>
@@ -267,7 +287,7 @@ include '../includes/connectdb.php';
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
                                 Cancel
                             </button>
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
                                 Delete
                             </button>
                         </div>
@@ -292,7 +312,7 @@ include '../includes/connectdb.php';
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
                                 Cancel
                             </button>
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
                                 Log Out
                             </button>
                         </div>
