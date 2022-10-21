@@ -1,3 +1,13 @@
+<?php
+include '../includes/connectdb.php';
+
+
+if($_SESSION['client_sid']==session_id()){
+	if(!isset($_SESSION["client_sid"]) || $_SESSION["client_sid"] !== session_id()){
+        header("location: ../login_template.php");
+        exit;
+    }		
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -63,7 +73,7 @@
 	<div class="container-fluid bg-light">
         <div class="main-body">
              <div class="row gutters-sm border-5 border-bottom border-primary ms-1 me-1 mt-5">
-                <h1>EXAMS</h1>
+                <h1>MY EXAMS</h1>
              </div>
 
             <!-- Modal -->
@@ -89,36 +99,45 @@
             <!-------------------------- EXAM CONTAINER ---------------------------->
             <div class="exam_container">
             <!-------------------------- EXAM CONTENT ---------------------------->
-                <div class="card bg-light border border-2 border-primary rounded mt-3 mb-3">
-                    <div class="card-header bg-light">
-                        <button type="button" class="btn btn-primary float-end" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                          Take Exam
-                        </button>
-                    </div>
+            <?php
 
-                    <div class="card-body">
-                        <h4 class="card-title mb-4">Exam Title</h4>
-                        <div class="hstack gap-3">
-                            <div class="bg-light border-bottom border-top border-primary p-2">
-                                11/04/2022
+              $sql = "SELECT * FROM tbexam";
+              $result = $connectdb->query($sql);
+
+              if ($result->num_rows > 0) {
+                while($row = $result->fetch_assoc()) {
+
+                echo '<div class="card bg-light border border-2 border-primary rounded mt-3 mb-3">';
+                  echo  '<div class="card-header bg-light">
+                          <button type="button" class="btn btn-primary float-end" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            Take Exam
+                          </button>
+                        </div>';
+                  echo  '<div class="card-body">';
+                    echo  '<h4 class="card-title mb-4">Exam Title</h4>
+                          <div class="hstack gap-3">';
+                      echo  '<div class="bg-light border-bottom border-top border-primary p-2">
+                              11/04/2022
                             </div>
 
                             <div class="vr"></div>
 
                             <div class="bg-light border-bottom border-top border-primary p-2">
-                                50 Items
+                              50 Items
                             </div>
 
                             <div class="vr"></div>
 
                             <div class="bg-light border-bottom border-top border-primary p-2">
-                                Multiple Choice
-                            </div>
-                        </div>
-
-                        <p class="card-text mt-4">Short Description of the Exam (Topic/Coverage)</p>
-                    </div>
-                </div>
+                              Multiple Choice
+                            </div>';
+                      echo  '</div>';
+                      echo  '<p class="card-text mt-4">Short Description of the Exam (Topic/Coverage)</p>';
+                    echo  '</div>';
+                  echo  '</div>';
+                }
+              }
+                ?>
 
             <!-------------------------- EXAM CONTENT END ---------------------------->
             </div>
@@ -130,3 +149,14 @@
     </footer>
 </body>
 </html>
+<?php
+    }else
+	{
+		if($_SESSION['admin_sid']==session_id()){
+			header("location:404.php");		
+		}
+		else{
+				header("location:../login_template.php");
+			}
+	}
+?>

@@ -8,6 +8,8 @@ $clUrcontact_num = $_POST['clUrcontact_num'];
 $clUremail = $_POST['clUremail'];
 $clUraddress = $_POST['clUraddress'];
 
+// put error catching cases 
+
 $usersquery = "INSERT INTO tbusers ( clUrFirstname, clUrLastname, clUrUsername, clUrPassword, 
                                 clUrcontact_num, clUremail, clUraddress)
                 VALUES ('$clUrFirstname','$clUrLastname','$clUrUsername', '$clUrPassword', 

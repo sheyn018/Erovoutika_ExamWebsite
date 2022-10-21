@@ -130,7 +130,7 @@ include '../includes/connectdb.php';
                                             echo'<td>'.$row["clUrdate_added"].'</td>';
                                             echo'<td></td>';
                                             echo'<td>';
-                                                echo '<a class="btn btn-outline-primary" href="">
+                                                echo '<a class="btn btn-outline-primary" href="admin_usereditpage_template.php?clUrID='.$row["clUrID"].'">
                                                     <i class="bi bi-pencil-square"></i> </a>';
                                                 echo '<a class="btn btn-outline-danger" href="">
                                                     <i class="bi bi-trash"></a>';
