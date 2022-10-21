@@ -5,6 +5,11 @@ $success=false;
 $username = $_POST['username'];
 $password = $_POST['password'];
 
+/**
+ * Simplify the fetched information by storing the data then passing it.
+ * 
+ */
+
 $result = mysqli_query($connectdb, "SELECT * FROM tbusers WHERE clUrUsername='$username' AND clUrPassword='$password' AND clUrLevel='0';");
 while($row = mysqli_fetch_array($result)){
 	$success = true;
@@ -14,11 +19,10 @@ while($row = mysqli_fetch_array($result)){
 }
 
 if($success == true){
-	session_start();
 	$_SESSION['admin_sid']=session_id();
 	$_SESSION['clUrID'] = $clUrID;
     $_SESSION['clUrUsername'] = $clUrUsername;
-
+    session_start();
 
 	header("location: ../webadmin/AdminHome.php");
 }else{
@@ -32,10 +36,10 @@ if($success == true){
         }
         if($success == true)
         {
-            session_start();
             $_SESSION['client_sid']=session_id();
             $_SESSION['clUrID'] = $clUrID;
-            $_SESSION['clUrLevel'] = $clUrLevel;		
+            $_SESSION['clUrLevel'] = $clUrLevel;	
+            session_start();	
             header("location: ../webclient/UserProfile.php");
         }
         else

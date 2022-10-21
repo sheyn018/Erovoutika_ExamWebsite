@@ -242,27 +242,28 @@ if($_SESSION['client_sid']==session_id())
                                     </div>
                                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                         <div class="form-group mb-3">
-                                                <label for="fullName">Old Password</label>
-                                                <input type="text" class="form-control" id="fullName" placeholder="Old Password">
+                                                <label for="old_password">Old Password</label>
+                                                <input type="password" class="form-control" id="old_password" placeholder="Old Password">
                                         </div>
                                     </div>
                                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                         <div class="form-group mb-3">
-                                                <label for="eMail">New Password</label>
-                                                <input type="email" class="form-control" id="eMail" placeholder="New Password">
+                                                <label for="new_password">New Password</label>
+                                                <input type="password" name="new_password" class="form-control" id="new_password" placeholder="New Password">
                                         </div>
                                     </div>
                                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                         <div class="form-group mb-3">
-                                                <label for="phone">Confirm Password</label>
-                                                <input type="text" class="form-control" id="phone" placeholder="Re-enter New Password">
+                                                <label for="confirm_password">Confirm Password</label>
+                                                <input type="password" name="confirm_password" class="form-control" id="confirm_password" placeholder="Re-enter New Password">
                                         </div>
                                     </div>
                                 </div>
                                     <div class="row gutters mt-3">
                                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                             <div class="text-right">
-                                                <button type="button" id="submit" name="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#SaveModal">Save</button>
+                                                <button type="submit" id="submit" name="submit" formaction="../crud/tbusersUserResetPassword.php"
+                                                class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#SaveModal">Save</button>
                                             </div>
                                         </div>
                                     </div>
