@@ -1,19 +1,20 @@
-<?php
+<!-- <?php
 include '../includes/connectdb.php';
 	if($_SESSION['admin_sid']==session_id())
 	{
-		?>
+		?> -->
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="../css/admin_signup_style.css">
-    </head>
-    <body>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title></title>
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="css/admin_signup_style.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+  </head>
+  <body>
   <section class="h-100 bg-primary">
     <div class="container py-5 h-10">
       <div class="row d-flex justify-content-center align-items-center h-100">
@@ -28,8 +29,6 @@ include '../includes/connectdb.php';
               <div class="col-xl-6">
                 <div class="card-body p-md-5 text-black">
                   <h3 class="mb-5 text-uppercase">Admin Registration Form</h3>
-
-                  <form action="signup.php" method="post">
 
                   <div class="row">
                     <div class="col-md-6 mb-4">
@@ -101,19 +100,18 @@ include '../includes/connectdb.php';
   </section>
 </body>
 </html>
-<?php
+<!-- <?php
 	}else
 	{
 		if($_SESSION['staff_sid']==session_id()){
-			header("location:../includes/error.php");		
+			header("location:404.php");		
 		}
 		else{
 			if($_SESSION['customer_sid']==session_id()){
-				header("location:../includes/error.php");		
+				header("location:404.php");		
 			}else{
 				header("location:../login_template.php");
 			}
 		}
 	}
-?>
-
+?> -->

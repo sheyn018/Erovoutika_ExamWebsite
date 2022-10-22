@@ -11,7 +11,7 @@ include_once 'src/includes/header.php';
     <title>Erovoutika | Examination</title>
 
  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
- <link rel="stylesheet" href="src/css/homestyle.css">
+ <link rel="stylesheet" href="src/css/home_style.css">
  <script src="https://kit.fontawesome.com/24d5cf3efd.js" crossorigin="anonymous"></script>
 
 </head>
@@ -22,11 +22,10 @@ include_once 'src/includes/header.php';
 			  <div class="home1">
           <img src="src/images/login.png" id="logo2" style="position:absolute";>
               <br><br>
-              <h4 class="info1" id="info1" style="margin-left: 730px;">One-Stop-Shop Innovative Solutions</h3>
+              <h4 class="info1" id="info1">&nbsp;&nbsp;&nbsp;One-Stop-Shop <br>Innovative Solutions</h3>
               <br>
-              <h5 class="info2" id="info2"style="margin-left: 730px; line-height: 40px;">We are team of Engineers and IT making <br> Solutions for Robotics, Automation, <br> Electronics and ICT.</h4>
-              <br><br><br><br>
-              <a href="" id="exam-list" style="--clr:#1e9bff"><span>Exam List</span><i></i></a>
+              <h5 class="info2" id="info2">We are team of Engineers and IT making <br> Solutions for Robotics, Automation, <br> Electronics and ICT.</h4>
+              <br><br>
         </div>
       </div>
     </section> 
@@ -46,7 +45,7 @@ include_once 'src/includes/header.php';
                   <div class="text">Erovoutika is a respected and experienced Automation and Robotics Company. Our highly professional teams, with in-depth knowledge of each jurisdiction, has been successfully deliver customer needs</div>
                   <h5>Our Aim</h5>
                   <div class="text">is to assist our clients in getting their needs and requirements in the easiest and fastest possible time in a most professional manner. We provide the highest quality service at the most reasonable cost.</div>
-                    <a href="about.html" class="theme-btn btn-style-three">Read More</a>
+                    <a href="#" class="theme-btn btn-style-three">Read More</a>
                 </div>
               </div>
                 
@@ -54,7 +53,7 @@ include_once 'src/includes/header.php';
               <div class="image-column col-md-6 col-sm-12 col-xs-12">
                 <div class="inner-column " data-wow-delay="0ms" data-wow-duration="1500ms">
                   <div class="image">
-                    <img src="src/images/working2.gif" style="height: 530px; width: 440px;" id="about-img" alt="">
+                    <img src="src/images/web.gif" id="about-img" alt="">
                       <div class="overlay-box">
                         <div class="year-box"><span class="number">3</span>Years <br> Experience <br> Working</div>
                       </div>
@@ -76,60 +75,65 @@ include_once 'src/includes/header.php';
       <div class="logo-slider">
         <div class="logo-slide-track">
           <div class="slide">
-            <img src="src/images/client-1.png" alt="" style="height: 100px; width: 170px;" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="src/images/client-1.png" alt="" style="height: 100px; width: 130px;" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           </div>
           <div class="slide">
-            <img src="src/images/client-2.png" alt="" style="height: 100px; width: 170px;" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="src/images/client-2.png" alt="" style="height: 100px; width: 130px;" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           </div>
           <div class="slide">
-            <img src="src/images/client-3.png" alt="" style="height: 100px; width: 170px;" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="src/images/client-3.png" alt="" style="height: 100px; width: 130px;" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           </div>
           <div class="slide">
-            <img src="src/images/client-4.png" alt="" style="height: 100px; width: 170px;" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="src/images/client-4.png" alt="" style="height: 100px; width: 130px;" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           </div>
           <div class="slide">
-            <img src="src/images/client-6.png" alt="" style="height: 100px; width: 170px;" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="src/images/client-6.png" alt="" style="height: 100px; width: 130px;" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           </div>
           <div class="slide">
-            <img src="src/images/client-1.png" alt="" style="height: 100px; width: 170px;" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="src/images/client-1.png" alt="" style="height: 100px; width: 130px;" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           </div>
           <div class="slide">
-            <img src="src/images/client-2.png" alt="" style="height: 100px; width: 170px;" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="src/images/client-2.png" alt="" style="height: 100px; width: 130px;" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           </div>
           <div class="slide">
-            <img src="src/images/client-3.png" alt="" style="height: 100px; width: 170px;" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="src/images/client-3.png" alt="" style="height: 100px; width: 130px;" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           </div>
           <div class="slide">
-            <img src="src/images/client-4.png" alt="" style="height: 100px; width: 170px;" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="src/images/client-4.png" alt="" style="height: 100px; width: 130px;" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           </div>
           <div class="slide">
-            <img src="src/images/client-5.png" alt="" style="height: 100px; width: 170px;" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="src/images/client-5.png" alt="" style="height: 100px; width: 130px;" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           </div>
           <div class="slide">
-            <img src="src/images/client-6.png" alt="" style="height: 100px; width: 170px;" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="src/images/client-6.png" alt="" style="height: 100px; width: 130px;" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           </div>
           <div class="slide">
-            <img src="src/images/client-1.png" alt="" style="height: 100px; width: 170px;" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="src/images/client-1.png" alt="" style="height: 100px; width: 130px;" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           </div>
           <div class="slide">
-            <img src="src/images/client-2.png" alt="" style="height: 100px; width: 170px;" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="src/images/client-2.png" alt="" style="height: 100px; width: 130px;" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           </div>
           <div class="slide">
-            <img src="src/images/client-3.png" alt="" style="height: 100px; width: 170px;" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="src/images/client-3.png" alt="" style="height: 100px; width: 130px;" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           </div>
           <div class="slide">
-            <img src="src/images/client-4.png" alt="" style="height: 100px; width: 170px;" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="src/images/client-4.png" alt="" style="height: 100px; width: 130px;" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           </div>
           <div class="slide">
-            <img src="src/images/client-5.png" alt="" style="height: 100px; width: 170px;" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="src/images/client-5.png" alt="" style="height: 100px; width: 130px;" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           </div>
           <div class="slide">
-            <img src="src/images/client-6.png" alt="" style="height: 100px; width: 170px;" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="src/images/client-6.png" alt="" style="height: 100px; width: 130px;" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           </div>
         </div>
       </div>
     </section>
     <br><br><br><br><br><br><br><br>
+
+    <!-- Expertise -->
+    <section class="expertise">
+      
+    </section>
 
     <!-- Porfolio -->
     <section class="porfolio"id="porfolio">
@@ -252,8 +256,8 @@ include_once 'src/includes/header.php';
     <div class="row">
           <div class="col-md-12">
               <div class="site-heading text-center">
-                  <h2><span>Training Program</span></h2>
-                  <h4>Ber Months Promo</h4>
+                  <h2><span>Upcoming Webinar</span></h2>
+                  <h4>-October-</h4>
               </div>
           </div>
       </div>
@@ -261,17 +265,17 @@ include_once 'src/includes/header.php';
   <div class="plan">
     <div class="plan-inner">
       <div class="entry-title">
-        <h3>Package 1</h3>
-        <div class="price">₱250<span>/PER SESSION</span>
+        <h3>Date</h3>
+        <div class="price">Free<span>/Webinar</span>
         </div>
       </div>
       <div class="entry-content">
         <ul>
-          <li><strong>1x</strong> HTML Course</li>
-          <li><strong>2x</strong> CSS Course</li>
-          <li><strong>3x</strong> JavaScript Course</li>
-          <li><strong>Free</strong> Front End Course</li>
-          <li><strong>Unlimited</strong> Python Course</li>
+          <li><strong>Time -</strong> HTML Course</li>
+          <li><strong>Time  -</strong> CSS Course</li>
+          <li><strong>Time  -</strong> JavaScript Course</li>
+          <li><strong>Time  -</strong> Front End Course</li>
+          <li><strong>Time  -</strong> Python Course</li>
         </ul>
       </div>
       <div class="btn">
@@ -285,17 +289,17 @@ include_once 'src/includes/header.php';
     <div class="plan-inner">
       <div class="hot">hot</div>
       <div class="entry-title">
-        <h3>Package 2</h3>
-        <div class="price">₱350<span>/PER SESSION</span>
+        <h3>Date</h3>
+        <div class="price">Free<span>/Webinar</span>
         </div>
       </div>
       <div class="entry-content">
         <ul>
-          <li><strong>1x</strong> SQL Course</li>
-          <li><strong>2x</strong> PHP Course</li>
-          <li><strong>3x</strong> Bootstrap 5</li>
-          <li><strong>Free</strong> C++ Course</li>
-          <li><strong>Unlimited</strong> C# Course</li>
+          <li><strong>Time  -</strong> SQL Course</li>
+          <li><strong>Time  -</strong> PHP Course</li>
+          <li><strong>Time  -</strong> Bootstrap 5</li>
+          <li><strong>Time  -</strong> C++ Course</li>
+          <li><strong>Time  -</strong> C# Course</li>
         </ul>
       </div>
       <div class="btn">
@@ -308,17 +312,17 @@ include_once 'src/includes/header.php';
   <div class="plan standard">
     <div class="plan-inner">
       <div class="entry-title">
-        <h3>Package 3</h3>
-        <div class="price">₱450<span>/PER SESSION</span>
+        <h3>Date</h3>
+        <div class="price">Free<span>/Webinar</span>
         </div>
       </div>
       <div class="entry-content">
         <ul>
-          <li><strong>2x</strong> jQuery Course</li>
-          <li><strong>Free</strong> React.js Course</li>
-          <li><strong>Custom</strong> Java Course</li>
-          <li><strong>2x</strong> Numpy Course</li>
-          <li><strong>Free</strong> Panda Course</li>
+          <li><strong>Time  -</strong> jQuery Course</li>
+          <li><strong>Time  -</strong> React.js Course</li>
+          <li><strong>Time  -</strong> Java Course</li>
+          <li><strong>Time  -</strong> Numpy Course</li>
+          <li><strong>Time  -</strong> Panda Course</li>
         </ul>
       </div>
       <div class="btn">
@@ -331,17 +335,17 @@ include_once 'src/includes/header.php';
   <div class="plan ultimite">
     <div class="plan-inner">
       <div class="entry-title">
-        <h3>Package 4</h3>
-        <div class="price">₱500<span>/PER SESSION</span>
+        <h3>Date</h3>
+        <div class="price">Free<span>/Webinar</span>
         </div>
       </div>
       <div class="entry-content">
         <ul>
-          <li><strong>1x</strong> Typescript Course</li>
-          <li><strong>2x</strong> XML Course</li>
-          <li><strong>3x</strong> Data Analytics Course</li>
-          <li><strong>Free</strong> Cyber Security Course</li>
-          <li><strong>Unlimited</strong> Accessibility Course</li>
+          <li><strong>Time  -</strong> Typescript Course</li>
+          <li><strong>Time  -</strong> XML Course</li>
+          <li><strong>Time  -</strong> Data Analytics Course</li>
+          <li><strong>Time  -</strong> Cyber Security Course</li>
+          <li><strong>Time  -</strong> Accessibility Course</li>
         </ul>
       </div>
       <div class="btn">

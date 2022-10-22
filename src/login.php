@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/loginstyle.css">
+    <link rel="stylesheet" href="css/user_login_style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
     <title>Erovoutika | Login</title>
   </head>
@@ -25,7 +25,7 @@
           <div class="row button">
             <input type="submit" value="Login">
           </div>
-          <div class="signup-link">Not a member? <a href="signup_template.php">Signup now</a></div>
+          <div class="signup-link">Not a member? <a href="signup.php">Signup now</a></div>
           <center>
             <br>
             <div class="return-link"><a href="../index.php">Return to Homepage</a></div>

@@ -12,22 +12,24 @@
 
     <a href="" class="brand"><img src="src/images/Logo2.png" id="logo"></a>
 
-      <div class="menu">
+      <div class="menu" id="menu-icon">
         <div class="btn">
           <i class="fas fa-times close-btn"></i>
         </div>
         <a href="#home">Home</a>
         <a href="#about-section">About</a>
-        <a href="#porfolio">Porfolio</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
+        <a href="src/blog.php">Blog</a>
+        <a href="src/tutorials.php">Tutorial</a>
+        <a href="src/exam_enroll.php">Exam&nbsp;List</a>
+        <a href="src/login.php"><button id="loginbtn">Login</button>
+        <a href="src/signup.php"><button id=signupbtn>Signup</button></a>
       </div>
-        <a href="src/login_template.php"><button id="loginbtn">Login</button></a>
-        <a href="src/signup_template.php"><button id="signupbtn">Signup</button></a>
-      <div class="btn"> 
+        
+      <div class="btn">
         <i class="fas fa-bars menu-btn"></i>
       </div>
     </header>  
+    
     </body>
 
     <script>
