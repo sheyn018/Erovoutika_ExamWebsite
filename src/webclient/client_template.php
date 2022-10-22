@@ -2,9 +2,12 @@
 include '../includes/connectdb.php';
 
 
-	if($_SESSION['client_sid']==session_id())
-	{
-		?>
+if($_SESSION['client_sid']==session_id()){
+	if(!isset($_SESSION["client_sid"]) || $_SESSION["client_sid"] !== session_id()){
+        header("location: ../login_template.php");
+        exit;
+    }		
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

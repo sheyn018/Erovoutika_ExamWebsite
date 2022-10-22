@@ -33,17 +33,19 @@ if($_SESSION['admin_sid']==session_id())
     </head>
 
     <body id="body-pd">
-        <header class="header" id="header">
+        <header class="header shadow" id="header">
             <div class="header_toggle"> 
                 <i class='bx bx-menu' id="header-toggle"></i> 
             </div>
             <div id="i--account--admin">
                 <div class="header_img"> 
-                    <img src="../images/Display Picture Icon.png" alt="display picture"> 
+                    <a href="AdminProfile.php">
+                        <img src="../images/Display Picture Icon.png" alt="display picture"> 
+                    </a>
                 </div>
                 <div>
-                    <button type="button" class="btn btn-outline-light ms-4 mt-2">
-                        <a href="../includes/logout.php" id="i--button--logout">Logout</a>
+                    <button type="button" class="btn ms-4 mt-2">
+                        <a href="../includes/logout.php" class="fw-bold" id="i--button--logout">Logout</a>
                     </button>
                 </div>
             </div>
@@ -51,51 +53,37 @@ if($_SESSION['admin_sid']==session_id())
         <div class="l-navbar" id="nav-bar">
             <nav class="nav">
                 <div> 
-                    <a href="#" class="nav_logo"> 
+                    <!-- Admin Home with Logo -->
+                    <a href="AdminHome.php" class="nav_logo"> 
                         <i>
-                            <img src="../images/Logo.png" alt="Erovoutika Logo" id="i--logo--erovoutika">
+                            <img src="../images/Small Logo.png" alt="Erovoutika Logo" id="i--logo--erovoutika">
                         </i> 
-                        <span class="nav_logo-name fs-5">Erouvotika</span> 
+                        <span class="nav_logo-name fs-5 fw-bold">Erouvotika</span> 
                     </a>
                     <div class="nav_list"> 
                         <a href="AdminHome.php" class="nav_link active"> 
                             <i class='bx bx-grid-alt nav_icon'></i> 
-                            <span class="nav_name">Dashboard</span> 
+                            <span class="nav_name fw-bold">Dashboard</span> 
                         </a> 
                         <a href="AdminProfile.php" class="nav_link">
                             <i class='bx bx-user nav_icon'></i> 
                             <span class="nav_name">Edit Profile</span> 
+                        </a>
+                        <a href="admin_usertable.php" class="nav_link"> 
+                            <i class='bx bx-table nav_icon'></i>
+                            <span class="nav_name">User Table</span> 
                         </a> 
                         <a href="AdminExamList.php" class="nav_link"> 
                             <i class='bx bx-message-square-detail nav_icon'></i> 
                             <span class="nav_name">Exam List</span> 
-                        </a> 
-                        <a href="#" class="nav_link"> 
-                            <i class='bx bx-bookmark nav_icon'></i> 
-                            <span class="nav_name">Bookmark</span> 
-                        </a> 
-                        <a href="#" class="nav_link"> 
-                            <i class='bx bx-folder nav_icon'></i> 
-                            <span class="nav_name">Files</span> 
-                        </a> 
-                        <a href="#" class="nav_link"> 
-                            <i class='bx bx-bar-chart-alt-2 nav_icon'></i> 
-                            <span class="nav_name">Stats</span> 
-                        </a> 
+                        </a>
                     </div>
-                </div>
-                 <!--<button type="button" class="btn btn-primary ms-3 mb-3"> -->
-                    
-                     <!--
-                        Temporarily enclosed this in <a> element.
-                            Button is usually used in form, modal.
-                            Not to redirect a page hehehe thank you~
-                    -->
+                </div> 
                     <a href="adminsignup_template.php"  class="btn btn-primary ms-3 mb-3">
-                    <i class="bi bi-pencil-square"></i> 
-                    <span class="nav_name" id="i--label--signout">Sign Up</span>
+                        <i class="bi bi-pencil-square"></i> 
+                        <span class="nav_name" id="i--label--signout">Sign Up</span>
                     </a>
-                 <!--</button> -->
+                </div> 
             </nav>
         </div>
 
@@ -108,7 +96,7 @@ if($_SESSION['admin_sid']==session_id())
                         <img src="../images/Display Picture Icon.png" alt="Photo/Icon" class="img-fluid m-3" id="i--banner--dp">
                     </div>
                     <div class="col-8">
-                        <h1 class="text-light mt-2" id="i--banner--title">Welcome, <?php echo $clUrUsername ?>Admin <?php echo $clUrUsername ?></h1>
+                        <h1 class="text-light mt-2" id="i--banner--title">Welcome, <?php echo $clUrUsername ?></h1>
                         <p class="text-light" id="i--banner--subtitle">You can manage the exam website here</p>
                     </div>
                     <div class="col-2">
@@ -127,60 +115,41 @@ if($_SESSION['admin_sid']==session_id())
                 </div>
                 <!-- Edit Banners -->
                 <div class="row my-2 gy-3">
-                    <div class="col-12">
-                        <div class="card" id="i--card--edit">
-                            <div class="card-body">
-                                <div class="container">
-                                    <div class="row fs-5">
-                                        EDIT NUMBER
-                                    </div>
-                                    <div class="row" id="i--line--card"></div>
-                                    <div class="row mt-4 fs-5">
-                                        EDIT DATE:
-                                    </div>
-                                    <div class="row my-2 fs-5">
+                <!-- 
+                    Things to change:
+                        Since this is recent edited exam
+                        we need to explicitly change the content by sorting it via
+                        date, status
+                -->
+                <?php
+
+                    $sql = "SELECT * FROM tbexam";
+                    $result = $connectdb->query($sql);
+
+                    if ($result->num_rows > 0) {
+                    while($row = $result->fetch_assoc()) {
+                        echo '<div class="col-12">';
+                        echo '<div class="card" id="i--card--edit">
+                                <div class="card-body">
+                                    <div class="container">';
+                                echo ' <div class="row fs-5">
+                                        '.$row["clExTitle"].'
+                                        </div>
+                                        <div class="row" id="i--line--card"></div>
+                                        <div class="row mt-4 fs-5">
+                                            EDIT DATE:
+                                        </div>
+                                        <div class="row my-2 fs-5">
                                         EDIT DETAILS:
-                                    </div>
+                                        </div>';
+                        echo '      </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="card" id="i--card--edit">
-                            <div class="card-body">
-                                <div class="container">
-                                    <div class="row fs-5">
-                                        EDIT NUMBER
-                                    </div>
-                                    <div class="row" id="i--line--card"></div>
-                                    <div class="row mt-4 fs-5">
-                                        EDIT DATE:
-                                    </div>
-                                    <div class="row my-2 fs-5">
-                                        EDIT DETAILS:
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 mb-4">
-                        <div class="card" id="i--card--edit">
-                            <div class="card-body">
-                                <div class="container">
-                                    <div class="row fs-5">
-                                        EDIT NUMBER
-                                    </div>
-                                    <div class="row" id="i--line--card"></div>
-                                    <div class="row mt-4 fs-5">
-                                        EDIT DATE:
-                                    </div>
-                                    <div class="row my-2 fs-5">
-                                        EDIT DETAILS:
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                              </div>';
+                        echo '</div>';
+                    }
+                }
+
+                ?>
                 </div>
             </div>
         </div>
@@ -203,7 +172,7 @@ if($_SESSION['admin_sid']==session_id())
 	}else
 	{
 		if($_SESSION['client_sid']==session_id()){
-			header("location:404.php");		
+			header("location:../includes/error.php");		
 		}
 		else{
 				header("location:../login_template.php");

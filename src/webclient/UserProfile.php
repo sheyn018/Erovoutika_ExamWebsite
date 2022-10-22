@@ -184,7 +184,7 @@ if($_SESSION['client_sid']==session_id())
                       echo '<div class="exam_card h-100">';
                         echo '<div class="card-body border border-2 border-primary rounded">';
                           echo '<h2 class="d-flex align-items-center border-5 border-bottom border-primary mb-4">'
-                          .$row["clExTitle"].'</h2>';
+                          .$row["clExName"].'</h2>';
 
                           echo '
                           <h6>Date Taken: </h6>
@@ -203,6 +203,9 @@ if($_SESSION['client_sid']==session_id())
                   }
 
                 ?>
+                </div>
+            </div>
+    </div>
 
     </body>
 </html>
@@ -210,7 +213,7 @@ if($_SESSION['client_sid']==session_id())
     }else
 	{
 		if($_SESSION['admin_sid']==session_id()){
-			header("location:404.php");		
+			header("location:../includes/error.php");		
 		}
 		else{
 				header("location:../login_template.php");

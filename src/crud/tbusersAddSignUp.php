@@ -8,6 +8,8 @@ $clUrcontact_num = $_POST['clUrcontact_num'];
 $clUremail = $_POST['clUremail'];
 $clUraddress = $_POST['clUraddress'];
 
+// put error catching cases 
+
 $usersquery = "INSERT INTO tbusers ( clUrFirstname, clUrLastname, clUrUsername, clUrPassword, 
                                 clUrcontact_num, clUremail, clUraddress)
                 VALUES ('$clUrFirstname','$clUrLastname','$clUrUsername', '$clUrPassword', 
@@ -16,13 +18,13 @@ $usersquery = "INSERT INTO tbusers ( clUrFirstname, clUrLastname, clUrUsername, 
 if(mysqli_query($connectdb, $usersquery)){
   echo "<script> 
   alert('Successfully Signed Up!'); 
-  window.location = '../login.php'; 
+  window.location = '../login_template.php'; 
   </script>";  
   
 } else{
   echo "<script>
   alert('Failed to Sign Up.');  
-  window.location = '../signup.php';
+  window.location = '../signup_template.php';
   </script>"; 
   
 }

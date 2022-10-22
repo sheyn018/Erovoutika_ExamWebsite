@@ -5,12 +5,12 @@
 :root{
     --header-height: 3rem;
     --nav-width: 68px;
-    --first-color: #f7f6fb;
-    --first-color-light: #055160;
-    --white-color: #2055b5;
+    --first-color: #535353;
+    --first-color-light: #E2E5F6;
+    --white-color: #ffffff;
     --body-font: 'Nunito', sans-serif;
     --normal-font-size: 1rem;
-    --z-fixed: 100
+    --z-fixed: 100                                                      
 }*,
 ::before,::after{box-sizing: border-box}
 
@@ -36,14 +36,15 @@ a{text-decoration: none}
     align-items: center;
     justify-content: space-between;
     padding: 0 1rem;
-    background-color: #2055B5;
+    background-color: #ffffff;
     z-index: var(--z-fixed);
     transition: .5s
 }
 
-.header_toggle{
-    color: #f7f6fb;
-    font-size: 1.5rem;cursor: pointer
+.header_toggle {
+    color: #535353;
+    font-size: 1.75rem;
+    cursor: pointer;
 }
 
 .header_img{
@@ -62,8 +63,13 @@ a{text-decoration: none}
     justify-content: flex-end;
 }
 
+button.btn.ms-4.mt-2 {
+    border-color: black;
+    border-width: 0.2rem;
+}
+
 #i--button--logout {
-    color: white;
+    color: black;
 }
 
 #i--button--logout:hover {
@@ -135,20 +141,15 @@ a{text-decoration: none}
 
 .nav_icon{font-size: 1.75rem}
 
+a.btn.ms-3.mb-3 {
+    background-color: #3333CC;
+    color: #ffffff;
+}
+
 /* Main Content */
 #i--container--mainContent{
     padding-top: 1rem;
     margin-top: 1rem
-}
-
-/* Profile Banner */
-#i--row--banner{
-    background: #0C2A73;
-}
-
-#i--banner--dp{
-    height: auto;
-    width: 7.5rem
 }
 
 #i--line--blue{
@@ -157,7 +158,7 @@ a{text-decoration: none}
     width: 17rem
 }
 
-/* History Cards */
+/* Cards */
 .card {
     border-color: #0C2A73;
     border-radius: .5rem;
@@ -169,18 +170,8 @@ a{text-decoration: none}
     height: 150px;
 }
 
-#i--line--card{
+.c-a--examlist{
     background: #2055B5;
-    height: .3rem;
-    width: 8.5rem
-}
-
-#i--button--edit{
-    background: #2055B5;
-}
-
-#i--button--check{
-     background: #2055B5;
 }
 
 .show{left: 0}
@@ -197,8 +188,6 @@ a{text-decoration: none}
     height: 32px;
     background-color: var(--white-color)
 }
-
-.height-100{height:100vh}
 
 @media screen and (min-width: 768px){
     body{
@@ -227,8 +216,4 @@ a{text-decoration: none}
     .show{width: calc(var(--nav-width) + 156px)}
 
     .body-pd{padding-left: calc(var(--nav-width) + 188px)}
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> c973e08478a02aa6990706f977f4db387653f360
