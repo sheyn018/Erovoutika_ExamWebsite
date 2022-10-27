@@ -46,7 +46,7 @@ if($_SESSION['client_sid']==session_id()){
                 <div class="navbar-nav float-end text-end pr-3">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-item nav-link text-dark mt-3" href="../webexam/ExamList.php">Exam List</a>
+                            <a class="nav-item nav-link text-dark mt-3" href="../webexam/UserExamList.php">Exam List</a>
                         </li>
                         <li class="nav-item">
                             <div class="btn-group">
@@ -57,7 +57,7 @@ if($_SESSION['client_sid']==session_id()){
                                 <li><a class="dropdown-item" href="../webclient/UserProfile.php"><i class="bi bi-person-circle me-2"></i>Profile</a></li>
                                 <li>
                                   <?php echo
-                                    '<a class="dropdown-item" href="Settings.php?clUrID='.$clUrID.'">'
+                                    '<a class="dropdown-item" href="Settings.php">'
                                     ?>
                                   <i class="bi bi-gear-fill me-2"></i>Settings</li>
                                 <li><a class="dropdown-item" href="../includes/logout.php"><span class="glyphicon me-2">&#xe017;</span>Logout</a></li>

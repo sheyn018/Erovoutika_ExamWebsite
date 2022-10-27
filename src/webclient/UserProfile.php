@@ -59,7 +59,7 @@ if($_SESSION['client_sid']==session_id())
             <div class="collapse navbar-collapse ml-7" id="navbarTogglerDemo03">
                 <div class="navbar-nav float-end text-end pr-3">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-item nav-link text-dark mt-3" href="../webexam/ExamList.php">Exam List</a></li>
+                        <li class="nav-item"><a class="nav-item nav-link text-dark mt-3" href="../webexam/UserExamList.php">Exam List</a></li>
                         <li class="nav-item">
                     <div class="btn-group">
                       <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">

@@ -17,21 +17,26 @@
 // If the examID is null, do not display anything(aka Add/Create New Exam), otherwise retrieve contents from database(aka Edit Existing Exam)
 /*
 Data for this webpage:
-curr_tbExam_data
-    clExID
-    clExName
-    clExDescription
-    clExInstructions
+    curr_tbExam_data
+        modifyType
+        clExID
+        clExName
+        clExDescription
+        clExInstructions
+        clExPublish
+        clExLastEditedBy
+        clExPublishedBy
 
-curr_QA_data
-    clQsID
-    clQsBody
-    clQsType
-    clQsCorrectAnswer
-        ...
-    tbAnswer_data
-        clAsID
-        clAsBody
+    curr_QA_data
+        modifyType
+        clQsID
+        clQsBody
+        clQsType
+        clQsCorrectAnswer
+        tbAnswer_data
+            modifyType
+            clAsID
+            clAsBody
 */
 /*
 Legend:
@@ -144,13 +149,13 @@ function displayExamInfo(in_displayContainerID) {
     // Check if the container exists and is defined, if not, exit
     if(container_element === undefined || container_element === null) { return; }
 
-    var examID_element = document.getElementById("i--label--examID");
-    var examPublish_element = document.getElementById("i--label--examPublish");
-    var examLastEditedBy_element = document.getElementById("i--label--examLastEditedBy");
-    var examPublishedBy_element = document.getElementById("i--label--examPublishedBy");
-    var examName_element = document.getElementById("i--input--examName");
-    var examDesc_element = document.getElementById("i--input--examDesc");
-    var examInst_element = document.getElementById("i--input--examInst");
+    var examID_element = document.getElementById("i-label--exameditor-examID");
+    var examPublish_element = document.getElementById("i-label--exameditor-examPublish");
+    var examLastEditedBy_element = document.getElementById("i-label--exameditor-examLastEditedBy");
+    var examPublishedBy_element = document.getElementById("i-label--exameditor-examPublishedBy");
+    var examName_element = document.getElementById("i-input--exameditor-examName");
+    var examDesc_element = document.getElementById("i-input--exameditor-examDesc");
+    var examInst_element = document.getElementById("i-input--exameditor-examInst");
     
     if(curr_tbExam_data.clExPublish == 0) { // If the Exam is NOT yet Published
         clExPublish_text_value = "Editable";
@@ -439,7 +444,7 @@ function displayQA(in_displayContainerID, in_itemCount) {
 
         var container_answer_element = inputElementsQuestion_obj['answer_row'];
 
-        if(curr_QA_data[question_count].clQsType == 0) { // Fill in the Blanks
+        if(curr_QA_data[question_count].clQsType == 0) { // 0 = Fill in the Blanks
             var inputElementsAnswer_obj = baseAnswerFillBlanks(container_answer_element.id, question_count+1, 1);
 
             // Answer(Blank)
@@ -455,7 +460,7 @@ function displayQA(in_displayContainerID, in_itemCount) {
             
             inputElementsAnswer_obj = undefined;
         }
-        else if(curr_QA_data[question_count].clQsType == 1) { // Hybrid Multiple Choice
+        else if(curr_QA_data[question_count].clQsType == 1) { // 1 = Hybrid Multiple Choice
             // Insert for ANSWER TABLE==============================
             var insert_table = document.createElement("table");
             insert_table.setAttribute("id", "i-table--question-answer-" + (question_count+1).toString());
@@ -955,8 +960,8 @@ function setSaveArrayModifyType(in_modifyTypeValue) {
 }
 
 function setPublishStatus(in_setDisabledStatus) {
-    var examPublishedBy_element = document.getElementById("i--label--examPublishedBy");
-    var examPublishStatus_element = document.getElementById('i--label--examPublish');
+    var examPublishedBy_element = document.getElementById("i-label--exameditor-examPublishedBy");
+    var examPublishStatus_element = document.getElementById('i-label--exameditor-examPublish');
     var examPublishButton_element = document.getElementById('i-inputbutton--exam-publishbutton');
     var input_elements = [];
     input_elements = input_elements.concat(Array.prototype.slice.call((document.getElementById('i-div--examinfo-display')).getElementsByTagName('textarea')));
@@ -1175,7 +1180,7 @@ function modifyExam(in_buttonName, in_elementID) {
     else if((in_buttonName.localeCompare("form_exam")) == 0) { // Update Exam (Form name = "form_exam"; Button name = "inputsubmit_exam_update")
         var emptyCorrectAnswerQAID = "";
         var toModifyCount = 0;
-        var examLastEditedBy_element = document.getElementById("i--label--examLastEditedBy");
+        var examLastEditedBy_element = document.getElementById("i-label--exameditor-examLastEditedBy");
         var examUpdateButton_element = document.getElementById('i-inputsubmit--exam-updatebutton');
         
         if(curr_QA_data.length == 0) { // Check if there is anything to edit
@@ -1329,27 +1334,27 @@ $('#i-div--qa-display').on('change', 'input.c-element--answer-hybridmultiple-che
     var qa_saveArrayIndex = Number(checkboxID.slice(checkboxID.lastIndexOf("-",checkboxID.lastIndexOf("-")-1)+1,checkboxID.lastIndexOf("-"))) - 1;
     var answerHybridMultiple_saveArrayIndex = Number(checkboxID.substring(checkboxID.lastIndexOf("-")+1)) - 1;
     var answerHybridMultiple_rowElement = document.getElementById("i-div--answer-hybridmultiple-" + (qa_saveArrayIndex+1) + "-" + (answerHybridMultiple_saveArrayIndex+1));
-    if(this.checked) { // Checked
+    
+    var correctAnswerHybridMultiple_saveArrayIndex = (curr_QA_data[qa_saveArrayIndex].clQsCorrectAnswer).findIndex(function (in_clAsID) {
+        return in_clAsID == curr_QA_data[qa_saveArrayIndex].tbAnswer_data[answerHybridMultiple_saveArrayIndex].clAsID;
+    });
+
+    if((this.checked == true) && (correctAnswerHybridMultiple_saveArrayIndex == -1)) { // Checked & Doesn't Exist Yet on Save Array
         correctAnswerSelector(answerHybridMultiple_rowElement);
         
         (curr_QA_data[qa_saveArrayIndex].clQsCorrectAnswer).push(curr_QA_data[qa_saveArrayIndex].tbAnswer_data[answerHybridMultiple_saveArrayIndex].clAsID);
     }
-    else { // Not Checked
+    else if((this.checked == false) && (correctAnswerHybridMultiple_saveArrayIndex != -1)) { // Not Checked & Exists on Save Array
         correctAnswerDeselector(answerHybridMultiple_rowElement);
 
-        var correctAnswerHybridMultiple_saveArrayIndex = (curr_QA_data[qa_saveArrayIndex].clQsCorrectAnswer).findIndex(function (in_clAsID) {
-            return in_clAsID == curr_QA_data[qa_saveArrayIndex].tbAnswer_data[answerHybridMultiple_saveArrayIndex].clAsID;
-        });
-
         (curr_QA_data[qa_saveArrayIndex].clQsCorrectAnswer).splice(correctAnswerHybridMultiple_saveArrayIndex,1);
+    }
+    else { // Exit if failed
+        return;
     }
 
     if((curr_QA_data[qa_saveArrayIndex].modifyType != 1) && (curr_QA_data[qa_saveArrayIndex].modifyType != 3)) { // If the modifyType is NOT (1 = Update) and (3 = Add), then set it to (1 = Update)
         curr_QA_data[qa_saveArrayIndex].modifyType = 1;
     }
 });
-
-
-
-
 

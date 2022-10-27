@@ -1,13 +1,12 @@
 // ============================Tabbed HTML Elements Toggler============================
-function tabComponent(id_tab) {
-    var tabCount;
-    var tabElements = document.getElementsByClassName("c-div--admincontrolpanel-tab");
+function tabComponent(in_tabsClass,in_tabID) {
+    var tabElements = document.getElementsByClassName(in_tabsClass);
     
-    for(tabCount = 0; tabCount < tabElements.length; tabCount++) {
+    for(var tabCount = 0; tabCount < tabElements.length; tabCount++) {
         tabElements[tabCount].style.display = "none";
     }
     
-    document.getElementById(id_tab).style.display = "block";
+    document.getElementById(in_tabID).style.display = "block";
 }
 
 // ============================Empty Table Label Initializer============================

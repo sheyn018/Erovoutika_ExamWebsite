@@ -9,7 +9,7 @@ USE `examwebsite-db`;
 -- ==================================================================tbusers
 DROP TABLE IF EXISTS `tbusers`;
 CREATE TABLE `tbusers` (
-	`clUrID` int(9) NOT NULL AUTO_INCREMENT, -- PK
+	`clUrID` int(9) UNSIGNED NOT NULL AUTO_INCREMENT, -- PK
 	`clUrFirstname` varchar(25) NOT NULL, 
 	`clUrLastname` varchar(25) NOT NULL, 
 	`clUrUsername` varchar(25) NOT NULL, 
@@ -54,7 +54,7 @@ CREATE TABLE `tbQuestion` (
 	`clExID` int(9) UNSIGNED NOT NULL, -- FK to `tbExam` PK; PK
 	`clQsBody` varchar(3000) NOT NULL, 
 	`clQsType` int(1) UNSIGNED NOT NULL, -- 0 = Fill in the Blanks; 1 = Hybrid Multiple Choice
-	`clQsCorrectAnswer` varchar(5000) NOT NULL, 
+	`clQsCorrectAnswer` varchar(7000) NOT NULL, 
     PRIMARY KEY (`clQsID`,`clExID`), 
     CONSTRAINT `fkQs_clExID` FOREIGN KEY (`clExID`) REFERENCES `tbExam` (`clExID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -80,5 +80,33 @@ INSERT INTO `tbAnswer` (`clAsID`,`clQsID`,`clAsBody`)
 		(4,1,'Stored procedure'), 
 		(5,1,'Trigger'), 
 		(6,2,'TESTANSWERHERE');
+UNLOCK TABLES;
+-- ==================================================================tbuserexam
+DROP TABLE IF EXISTS `tbuserexam`;
+CREATE TABLE `tbuserexam` (
+	`clUeID` int(9) UNSIGNED NOT NULL, -- PK
+	`clUrID` int(9) UNSIGNED NOT NULL, -- FK to `tbusers` PK;
+	`clExID` int(9) UNSIGNED NOT NULL, -- FK to `tbExam` PK;
+    PRIMARY KEY (`clUeID`), 
+    CONSTRAINT `fkUe_clUrID` FOREIGN KEY (`clUrID`) REFERENCES `tbusers` (`clUrID`), 
+    CONSTRAINT `fkUe_clExID` FOREIGN KEY (`clExID`) REFERENCES `tbExam` (`clExID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+LOCK TABLES `tbuserexam` WRITE;
+INSERT INTO `tbuserexam` (`clUeID`,`clUrID`,`clExID`) 
+	VALUES (1,3,1);
+UNLOCK TABLES;
+-- ==================================================================tbuseranswer
+DROP TABLE IF EXISTS `tbuseranswer`;
+CREATE TABLE `tbuseranswer` (
+	`clUeID` int(9) UNSIGNED NOT NULL, -- FK to `tbuserexam` PK;
+	`clUaQuestionID` int(9) UNSIGNED NOT NULL, -- PK
+	`clUaAnswer` varchar(7000) NOT NULL, 
+    PRIMARY KEY (`clUeID`,`clUaQuestionID`), 
+    CONSTRAINT `fkUa_clUeID` FOREIGN KEY (`clUeID`) REFERENCES `tbuserexam` (`clUeID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+LOCK TABLES `tbuseranswer` WRITE;
+INSERT INTO `tbuseranswer` (`clUeID`,`clUaQuestionID`,`clUaAnswer`) 
+	VALUES (1,1,'3,4'), 
+		(1,2,'ThisIsMyAnswer');
 UNLOCK TABLES;
 -- ==================================================================
