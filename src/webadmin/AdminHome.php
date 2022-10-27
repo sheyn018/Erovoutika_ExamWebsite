@@ -133,7 +133,7 @@ if($_SESSION['admin_sid']==session_id())
                                 <div class="card-body">
                                     <div class="container">';
                                 echo ' <div class="row fs-5">
-                                        '.$row["clExTitle"].'
+                                        '.$row["clExName"].'
                                         </div>
                                         <div class="row" id="i--line--card"></div>
                                         <div class="row mt-4 fs-5">

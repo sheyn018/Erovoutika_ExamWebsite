@@ -7,7 +7,7 @@ $clExID = $_GET['clExID'];
     $examQuery = mysqli_query($connectdb, "SELECT * FROM tbexam where clExID = '$clExID'");
       while($row = mysqli_fetch_array($examQuery)){
         $clExID = $row['clExID'];
-        $clExTitle = $row['clExTitle']; 
+        $clExName = $row['clExName']; 
         $clExDescription = $row['clExDescription'];
         $clExInstructions = $row['clExInstructions'];
     }
@@ -25,13 +25,13 @@ $clExID = $_GET['clExID'];
     <!------- PORTAL INFO CONTAINER -------->
     <div>
         <!-- Title Container -->
-        <h1><?php echo $clExTitle ?></h1>
+        <h1><?php echo $clExName ?></h1>
         <!-- Information Container -->
         <p><?php echo $clExDescription ?></p>
         <p><?php echo $clExInstructions ?></p>
         <!-- GETS THE EXAM ID THEN PASS IT TO THE QUESTION -->
         <?php echo
-            '<a href="questionPage.php?clExID='.$clExID.'">'
+            '<a href="../webexam/UserExamTaker.php?clExID='.$clExID.'">'
             ?>
             Start Answering</a>
     </div>

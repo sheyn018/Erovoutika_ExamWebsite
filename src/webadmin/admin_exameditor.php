@@ -285,7 +285,7 @@
                                                                 <label for="i--input--examID" class="card-title text-primary text-uppercase fs-3 fw-bold form-label">
                                                                     Exam ID: 
                                                                 </label>
-                                                                <label class="card-title text-primary text-uppercase fs-3 form-label" id="i--label--examID"></label>
+                                                                <label class="card-title text-primary text-uppercase fs-3 form-label" id="i-label--exameditor-examID"></label>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -300,7 +300,7 @@
                                                                 <label for="i--input--examPublish" class="card-title text-primary text-uppercase fs-3 fw-bold form-label">
                                                                     Exam Publish Status: 
                                                                 </label>
-                                                                <label class="card-title text-primary text-uppercase fs-3 form-label" id="i--label--examPublish"></label>
+                                                                <label class="card-title text-primary text-uppercase fs-3 form-label" id="i-label--exameditor-examPublish"></label>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -315,7 +315,7 @@
                                                                 <label for="i--input--examLastEditedBy" class="card-title text-primary text-uppercase fs-3 fw-bold form-label">
                                                                     Last Edited By: 
                                                                 </label>
-                                                                <label class="card-title text-primary text-uppercase fs-3 form-label" id="i--label--examLastEditedBy"></label>
+                                                                <label class="card-title text-primary text-uppercase fs-3 form-label" id="i-label--exameditor-examLastEditedBy"></label>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -330,7 +330,7 @@
                                                                 <label for="i--input--examPublishedBy" class="card-title text-primary text-uppercase fs-3 fw-bold form-label">
                                                                     Published By: 
                                                                 </label>
-                                                                <label class="card-title text-primary text-uppercase fs-3 form-label" id="i--label--examPublishedBy"></label>
+                                                                <label class="card-title text-primary text-uppercase fs-3 form-label" id="i-label--exameditor-examPublishedBy"></label>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -342,10 +342,10 @@
                                                     <div class="card-body m-1">
                                                         <div class="row">
                                                             <div class="col-12 mt-1">
-                                                                <label for="i--input--examName" class="card-title text-primary text-uppercase fs-3 fw-bold form-label">
+                                                            <label for="i-input--exameditor-examName" class="card-title text-primary text-uppercase fs-3 fw-bold form-label">
                                                                     Exam Name
                                                                 </label>
-                                                                <textarea name="clExName_value" class="form-control card-text text-dark fs-6" id="i--input--examName" required></textarea>
+                                                                <textarea name="clExName_value" class="form-control card-text text-dark fs-6" id="i-input--exameditor-examName" required></textarea>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -357,10 +357,10 @@
                                                     <div class="card-body m-1">
                                                         <div class="row">
                                                             <div class="col-12 mt-1">
-                                                                <label for="i--input--examDesc" class="card-title text-primary text-uppercase fs-3 fw-bold form-label">
+                                                                <label for="i-input--exameditor-examDesc" class="card-title text-primary text-uppercase fs-3 fw-bold form-label">
                                                                     Exam Description
                                                                 </label>
-                                                                <textarea name="clExDescription_value" class="form-control card-text text-dark fs-6" id="i--input--examDesc"  cols="30" rows="5" required></textarea>
+                                                                <textarea name="clExDescription_value" class="form-control card-text text-dark fs-6" id="i-input--exameditor-examDesc"  cols="30" rows="5" required></textarea>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -372,10 +372,10 @@
                                                     <div class="card-body m-1">
                                                         <div class="row">
                                                             <div class="col-12 mt-1">
-                                                                <label for="i--input--examInst" class="card-title text-primary text-uppercase fs-3 fw-bold form-label">
+                                                            <label for="i-input--exameditor-examInst" class="card-title text-primary text-uppercase fs-3 fw-bold form-label">
                                                                     Exam Instructions
                                                                 </label>
-                                                                <textarea name="clExInstructions_value" class="form-control card-text text-dark fs-6" id="i--input--examInst"  cols="30" rows="5"></textarea>
+                                                                <textarea name="clExInstructions_value" class="form-control card-text text-dark fs-6" id="i-input--exameditor-examInst"  cols="30" rows="5"></textarea>
                                                             </div>
                                                         </div>
                                                     </div>

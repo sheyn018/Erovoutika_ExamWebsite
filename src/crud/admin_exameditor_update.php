@@ -51,6 +51,11 @@
                         '$clQsCorrectAnswer_value'
                     );
                 ";
+                
+                // Clear variables(Optional)
+                unset($clQsBody_value);
+                unset($clQsType_value);
+                unset($clQsCorrectAnswer_value);
             }
 
             for($answer_count = 0; $answer_count < count($curr_QA_data[$question_count]['tbAnswer_data']); $answer_count++) {
@@ -84,7 +89,14 @@
                             );
                         ";
                     }
+
+                    // Clear variables(Optional)
+                    unset($clAsBody_value);
                 }
+
+                // Clear variables(Optional)
+                unset($answer_modifyType);
+                unset($clAsID_value);
             }
             
             if($question_modifyType == "2") { // Delete/Nullify Current Existing Question
@@ -102,9 +114,18 @@
                         `clQsType` = '$clQsType_value', 
                         `clQsCorrectAnswer` = '$clQsCorrectAnswer_value' 
                     WHERE `clQsID` = '$clQsID_value' AND `clExID` = '$clExID_value';
-                ";
-            }
-        }
+                    ";
+
+// Clear variables(Optional)
+unset($clQsBody_value);
+unset($clQsType_value);
+unset($clQsCorrectAnswer_value);
+}
+
+// Clear variables(Optional)
+unset($question_modifyType);
+unset($clQsID_value);
+}
     
         $examInfo_modifyType = $curr_tbExam_data['modifyType'];
         
@@ -149,7 +170,19 @@
                     );
                 ";
             }
+
+            // Clear variables(Optional)
+            unset($clExName_value);
+            unset($clExDescription_value);
+            unset($clExInstructions_value);
+            unset($clExLastEditedBy_value);
         }
+
+        // Clear variables(Optional)
+        unset($curr_tbExam_data);
+        unset($curr_QA_data);
+        
+        unset($examInfo_modifyType);
     }
     else if($updateType == 1) { // Add New Exam
         $curr_tbExam_data = $_POST['curr_tbExam_data_ajax'];
@@ -205,8 +238,8 @@
 
             for($answer_count = 0; $answer_count < count($curr_QA_data[$question_count]['tbAnswer_data']); $answer_count++) {
                 $clAsID_value = $curr_QA_data[$question_count]['tbAnswer_data'][$answer_count]['clAsID'];
-                
                 $clAsBody_value = $curr_QA_data[$question_count]['tbAnswer_data'][$answer_count]['clAsBody'];
+
                 $sql_query .= "INSERT INTO `tbAnswer` (
                         `clAsID`, 
                         `clQsID`, 
@@ -218,8 +251,27 @@
                         '$clAsBody_value'
                     );
                 ";
+
+                // Clear variables(Optional)
+                unset($clAsID_value);
+                unset($clAsBody_value);
             }
+
+            // Clear variables(Optional)
+            unset($clQsID_value);
+            unset($clQsBody_value);
+            unset($clQsType_value);
+            unset($clQsCorrectAnswer_value);
         }
+
+        // Clear variables(Optional)
+        unset($curr_tbExam_data);
+        unset($curr_QA_data);
+
+        unset($clExName_value);
+        unset($clExDescription_value);
+        unset($clExInstructions_value);
+        unset($clExLastEditedBy_value);
     }
     else if($updateType == 2) { // Publish Existing Exam
         $clExID_value = $_POST['clExID_ajax'];
@@ -230,8 +282,12 @@
             SET `clExPublish` = '$clExPublish_value', 
                 `clExPublishedBy` = '$clExPublishedBy_value' 
             WHERE `clExID` = '$clExID_value';
-        ";
-    }
+            ";
+
+// Clear variables(Optional)
+unset($clExPublish_value);
+unset($clExPublishedBy_value);
+}
 
 	if(!empty($sql_query)) {
         // Insert SQL Queries
@@ -251,4 +307,10 @@
 	
 	// End Database Connection
 	mysqli_close($connectdb);
+
+    // Clear variables(Optional)
+    unset($updateType);
+    unset($clExID_value);
+
+    unset($connectdb);
 ?>
